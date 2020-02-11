@@ -1,0 +1,24 @@
+/* Color Theme Swatches in Hex */
+$blue-1-hex: #034873
+$blue-2-hex: #022840
+$blue-3-hex: #0396A6
+$green-1-hex: #04BF9D
+$green-2-hex: #04D98B
+
+/* Color Theme Swatches in RGBA */
+$blue-1-rgba: rgba(3,72,115, 1)
+$blue-2-rgba: rgba(2,40,64, 1)
+$blue-3-rgba: rgba(3,150,166, 1)
+$green-1-rgba: rgba(4,191,157, 1)
+$green-2-rgba: rgba(4,217,139, 1)
+
+@mixin linear-gradient($direction, $color-stops)
+  background: nth(nth($color-stops, 1), 1)
+  background: -webkit-linear-gradient($direction, $color-stops)
+  background: linear-gradient($direction, $color-stops)
+
+
+body
+  @include linear-gradient($green-1-hex, $green-2-hex)
+
+
