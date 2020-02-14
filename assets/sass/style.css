@@ -1,0 +1,9 @@
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+body {
+  background: #0396a6;
+  background: -webkit-linear-gradient(#04BF9D, #0396a6);
+  background: linear-gradient(#04BF9D, #0396a6);
+  height: 1920px; }
+
+/*# sourceMappingURL=style.css.map */
