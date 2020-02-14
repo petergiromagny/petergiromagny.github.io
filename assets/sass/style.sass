@@ -12,6 +12,11 @@ $blue-3-rgba: rgba(3,150,166, 1)
 $green-1-rgba: rgba(4,191,157, 1)
 $green-2-rgba: rgba(4,217,139, 1)
 
+/* Font style */
+$BigTitle : permanent-marker, sans-serif
+
+@import url("https://use.typekit.net/and7wxf.css")
+
 @mixin linear-gradient($direction, $color-stops)
   background: nth(nth($color-stops, 1), 1)
   background: -webkit-linear-gradient($direction, $color-stops)
@@ -20,4 +25,3 @@ $green-2-rgba: rgba(4,217,139, 1)
 
 body
   @include linear-gradient($green-1-hex, $blue-3-rgba)
-  height: 1920px

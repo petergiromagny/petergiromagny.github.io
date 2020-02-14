@@ -1,9 +1,10 @@
 /* Color Theme Swatches in Hex */
 /* Color Theme Swatches in RGBA */
+/* Font style */
+@import url("https://use.typekit.net/and7wxf.css");
 body {
   background: #0396a6;
   background: -webkit-linear-gradient(#04BF9D, #0396a6);
-  background: linear-gradient(#04BF9D, #0396a6);
-  height: 1920px; }
+  background: linear-gradient(#04BF9D, #0396a6); }
 
 /*# sourceMappingURL=style.css.map */
