@@ -6,22 +6,80 @@ $green-1-hex: #04BF9D
 $green-2-hex: #04D98B
 
 /* Color Theme Swatches in RGBA */
-$blue-1-rgba: rgba(3,72,115, 1)
-$blue-2-rgba: rgba(2,40,64, 1)
-$blue-3-rgba: rgba(3,150,166, 1)
-$green-1-rgba: rgba(4,191,157, 1)
-$green-2-rgba: rgba(4,217,139, 1)
+$blue-1-rgba: rgba(3,72,115, .3)
+$blue-2-rgba: rgba(2,40,64, .3)
+$blue-3-rgba: rgba(3,150,166, .3)
+$green-1-rgba: rgba(4,191,157, .3)
+$green-2-rgba: rgba(4,217,139, .3)
+
+$text-color : #000000
+
+$shadow1: rgba(0, 0, 0, 0.4)
 
 /* Font style */
-$BigTitle : permanent-marker, sans-serif
-
 @import url("https://use.typekit.net/and7wxf.css")
 
-@mixin linear-gradient($direction, $color-stops)
+$first-font : permanent-marker, sans-serif
+$second-font : muli, sans-serif
+
+$muli-regular: 400
+$muli-bold: 700
+$muli-black: 900
+
+=boxshadow-bottom($color-shadow)
+  -webkit-box-shadow: 0 5px 15px $color-shadow
+  -moz-box-shadow: 0 5px 15px $color-shadow
+  box-shadow: 0 5px 15px $color-shadow
+
+$open-transition: ease-in 0.5s
+$link-transition: 0.2s
+
+=linear-gradient($direction, $color-stops)
   background: nth(nth($color-stops, 1), 1)
   background: -webkit-linear-gradient($direction, $color-stops)
   background: linear-gradient($direction, $color-stops)
 
+a
+  text-decoration: none
+  transition: $link-transition
+  color: $text-color
+a:hover
+  text-decoration: none
+  transition: $link-transition
 
-body
-  @include linear-gradient($green-1-hex, $blue-3-rgba)
+header
+  .col-left
+    text-align: right
+    font-family: $second-font
+    font-weight: $muli-bold
+    .link-left
+      margin: 1rem 0
+      a
+        margin: 0 2.5rem
+      a:hover
+        color: $green-1-hex
+
+  .col-middle
+    text-align: center
+    h1
+      font-family: $first-font
+      a
+        color: $green-1-hex
+      a:hover
+        color: $blue-3-hex
+
+  .col-right
+    text-align: left
+    font-family: $second-font
+    font-weight: $muli-bold
+    .link-right
+      margin: 1rem 0
+      a
+        margin: 0 2.5rem
+      a:hover
+        color: $green-1-hex
+
+  .header-bottom
+    +linear-gradient($green-1-hex, $blue-3-hex )
+    +boxshadow-bottom($shadow1)
+    height: 5px

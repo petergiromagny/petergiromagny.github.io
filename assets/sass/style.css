@@ -2,9 +2,50 @@
 /* Color Theme Swatches in RGBA */
 /* Font style */
 @import url("https://use.typekit.net/and7wxf.css");
-body {
-  background: #0396a6;
-  background: -webkit-linear-gradient(#04BF9D, #0396a6);
-  background: linear-gradient(#04BF9D, #0396a6); }
+a {
+  text-decoration: none;
+  transition: 0.2s;
+  color: #000000; }
+
+a:hover {
+  text-decoration: none;
+  transition: 0.2s; }
+
+header .col-left {
+  text-align: right;
+  font-family: muli, sans-serif;
+  font-weight: 700; }
+  header .col-left .link-left {
+    margin: 1rem 0; }
+    header .col-left .link-left a {
+      margin: 0 2.5rem; }
+    header .col-left .link-left a:hover {
+      color: #04BF9D; }
+header .col-middle {
+  text-align: center; }
+  header .col-middle h1 {
+    font-family: permanent-marker, sans-serif; }
+    header .col-middle h1 a {
+      color: #04BF9D; }
+    header .col-middle h1 a:hover {
+      color: #0396A6; }
+header .col-right {
+  text-align: left;
+  font-family: muli, sans-serif;
+  font-weight: 700; }
+  header .col-right .link-right {
+    margin: 1rem 0; }
+    header .col-right .link-right a {
+      margin: 0 2.5rem; }
+    header .col-right .link-right a:hover {
+      color: #04BF9D; }
+header .header-bottom {
+  background: #0396A6;
+  background: -webkit-linear-gradient(#04BF9D, #0396A6);
+  background: linear-gradient(#04BF9D, #0396A6);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  height: 5px; }
 
 /*# sourceMappingURL=style.css.map */
