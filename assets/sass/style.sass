@@ -1,9 +1,13 @@
 /* Color Theme Swatches in Hex */
-$blue-1-hex: #034873
-$blue-2-hex: #022840
-$blue-3-hex: #0396A6
-$green-1-hex: #04BF9D
-$green-2-hex: #04D98B
+//$blue-1-hex: #034873
+//$blue-2-hex: #022840
+//$blue-3-hex: #0396A6
+//$green-1-hex: #04BF9D
+//$green-2-hex: #04D98B
+
+$purple: #330867
+$blue: #316296
+$cyan: #30cfd0
 
 /* Color Theme Swatches in RGBA */
 $blue-1-rgba: rgba(3,72,115, .3)
@@ -26,13 +30,18 @@ $muli-regular: 400
 $muli-bold: 700
 $muli-black: 900
 
+$open-transition: ease-in 0.5s
+$link-transition: 0.2s
+
+=boxshadow-basic($color-shadow)
+  -webkit-box-shadow: 0 0 10px $color-shadow
+  -moz-box-shadow: 0 0 10px $color-shadow
+  box-shadow: 0 0 10px $color-shadow
+
 =boxshadow-bottom($color-shadow)
   -webkit-box-shadow: 0 5px 15px $color-shadow
   -moz-box-shadow: 0 5px 15px $color-shadow
   box-shadow: 0 5px 15px $color-shadow
-
-$open-transition: ease-in 0.5s
-$link-transition: 0.2s
 
 =linear-gradient($direction, $color-stops)
   background: nth(nth($color-stops, 1), 1)
@@ -57,16 +66,16 @@ header
       a
         margin: 0 2.5rem
       a:hover
-        color: $green-1-hex
+        color: $cyan
 
   .col-middle
     text-align: center
     h1
       font-family: $first-font
       a
-        color: $green-1-hex
+        color: $cyan
       a:hover
-        color: $blue-3-hex
+        color: $purple
 
   .col-right
     text-align: left
@@ -77,9 +86,100 @@ header
       a
         margin: 0 2.5rem
       a:hover
-        color: $green-1-hex
+        color: $cyan
 
-  .header-bottom
-    +linear-gradient($green-1-hex, $blue-3-hex )
-    +boxshadow-bottom($shadow1)
-    height: 5px
+  .border-bottom
+    border-bottom-width: 2px !important
+    border-bottom-style: solid !important
+    border-bottom-color: $cyan !important
+
+.body
+  font-family: $second-font
+  margin-top: 3rem
+  margin-bottom: 3rem
+  #introduction
+    .circle-img
+      display: grid
+      justify-content: center
+      img
+        width: 350px
+        border: 6px solid $cyan
+        border-radius: 50%
+        background-color: $cyan
+        +boxshadow-basic($shadow1)
+
+    .description
+      margin-top: 3rem
+      .description-title
+        margin-bottom: 2.5rem
+        h2
+          font-family: $first-font
+          font-size: 3rem
+          text-align: center
+        h3
+          font-size: 1.5rem
+          text-align: center
+      blockquote
+        font-style: italic
+        +linear-gradient($cyan, $purple)
+        +boxshadow-bottom($shadow1)
+        color: #FFFFFF
+        border-radius: 8px
+        padding: 1rem 15rem
+        p
+          margin-top: 1rem
+          margin-bottom: 0
+
+  #educations
+    margin: 4.5rem 0
+    .row
+      margin-top: 2rem
+      margin-bottom: 2rem
+      img
+        width: 200px
+      h4
+        font-weight: $muli-bold
+
+  #experiences
+    .block-experience
+      +boxshadow-basic($shadow1)
+      border-radius: 10px
+
+      .block-experience_logo
+        display: grid
+        justify-content: center
+        padding: 1rem
+        min-height: 220px
+        .logo
+          width: 250px
+          margin: auto
+
+      .block-experience_title
+        text-align: center
+        padding: 1rem
+
+      .block-experience_description
+        .link-list
+          display: flex
+          text-align: center
+        .drop
+          padding: .5rem
+          color: $purple
+          width: 50%
+        .drop-on
+          border: 2px solid $blue
+          border-bottom: 0
+        .drop-off
+          border-bottom: 2px solid $blue
+        .drop-right-on
+          border-top-right-radius: 5px
+        .drop-left-on
+          border-top-left-radius: 5px
+
+        .list-on
+          border: 2px solid $blue
+          border-top: 0
+          border-bottom-left-radius: 5px
+          border-bottom-right-radius: 5px
+        .list-off
+          display: none
