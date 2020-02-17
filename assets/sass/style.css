@@ -1,5 +1,4 @@
 /* Color Theme Swatches in Hex */
-/* Color Theme Swatches in RGBA */
 /* Font style */
 @import url("https://use.typekit.net/and7wxf.css");
 a {
@@ -11,38 +10,48 @@ a:hover {
   text-decoration: none;
   transition: 0.2s; }
 
-header .col-left {
-  text-align: right;
-  font-family: muli, sans-serif;
-  font-weight: 700; }
-  header .col-left .link-left {
+header {
+  background-color: #F2F2F2; }
+  header .font-style {
+    font-family: muli, sans-serif;
+    font-weight: 700; }
+  header .col-left {
+    text-align: right; }
+  header .link {
     margin: 1rem 0; }
-    header .col-left .link-left a {
-      margin: 0 2.5rem; }
-    header .col-left .link-left a:hover {
-      color: #30cfd0; }
-header .col-middle {
-  text-align: center; }
-  header .col-middle h1 {
-    font-family: permanent-marker, sans-serif; }
-    header .col-middle h1 a {
-      color: #30cfd0; }
-    header .col-middle h1 a:hover {
-      color: #330867; }
-header .col-right {
-  text-align: left;
-  font-family: muli, sans-serif;
-  font-weight: 700; }
-  header .col-right .link-right {
-    margin: 1rem 0; }
-    header .col-right .link-right a {
-      margin: 0 2.5rem; }
-    header .col-right .link-right a:hover {
-      color: #30cfd0; }
-header .border-bottom {
-  border-bottom-width: 2px !important;
-  border-bottom-style: solid !important;
-  border-bottom-color: #30cfd0 !important; }
+    header .link a {
+      margin: 0 2.5rem;
+      position: relative; }
+    header .link a:hover {
+      color: #000000; }
+    header .link a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #024082;
+      transition: opacity 0.2s; }
+    header .link a:hover::before {
+      opacity: 1;
+      transition: opacity 0.2s; }
+  header .col-middle {
+    text-align: center; }
+    header .col-middle h1 {
+      font-family: permanent-marker, sans-serif; }
+      header .col-middle h1 a {
+        color: #024082;
+        transition: 0.2s; }
+      header .col-middle h1 a:hover {
+        transition: 0.2s;
+        text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); }
+  header .col-right {
+    text-align: left; }
+  header .border-bottom {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
 
 .body {
   font-family: muli, sans-serif;
@@ -53,9 +62,9 @@ header .border-bottom {
     justify-content: center; }
     .body #introduction .circle-img img {
       width: 350px;
-      border: 6px solid #30cfd0;
+      border: 6px solid #024082;
       border-radius: 50%;
-      background-color: #30cfd0;
+      background-color: #024082;
       -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
@@ -72,13 +81,10 @@ header .border-bottom {
         text-align: center; }
     .body #introduction .description blockquote {
       font-style: italic;
-      background: #330867;
-      background: -webkit-linear-gradient(#30cfd0, #330867);
-      background: linear-gradient(#30cfd0, #330867);
+      background-color: #F2F2F2;
       -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-      color: #FFFFFF;
       border-radius: 8px;
       padding: 1rem 15rem; }
       .body #introduction .description blockquote p {
@@ -90,47 +96,16 @@ header .border-bottom {
       margin-top: 2rem;
       margin-bottom: 2rem; }
       .body #educations .row img {
-        width: 200px; }
+        width: 250px; }
       .body #educations .row h4 {
         font-weight: 700; }
-  .body #experiences .block-experience {
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    border-radius: 10px; }
-    .body #experiences .block-experience .block-experience_logo {
-      display: grid;
-      justify-content: center;
-      padding: 1rem;
-      min-height: 220px; }
-      .body #experiences .block-experience .block-experience_logo .logo {
-        width: 250px;
-        margin: auto; }
-    .body #experiences .block-experience .block-experience_title {
-      text-align: center;
-      padding: 1rem; }
-    .body #experiences .block-experience .block-experience_description .link-list {
-      display: flex;
-      text-align: center; }
-    .body #experiences .block-experience .block-experience_description .drop {
-      padding: 0.5rem;
-      color: #330867;
-      width: 50%; }
-    .body #experiences .block-experience .block-experience_description .drop-on {
-      border: 2px solid #316296;
-      border-bottom: 0; }
-    .body #experiences .block-experience .block-experience_description .drop-off {
-      border-bottom: 2px solid #316296; }
-    .body #experiences .block-experience .block-experience_description .drop-right-on {
-      border-top-right-radius: 5px; }
-    .body #experiences .block-experience .block-experience_description .drop-left-on {
-      border-top-left-radius: 5px; }
-    .body #experiences .block-experience .block-experience_description .list-on {
-      border: 2px solid #316296;
-      border-top: 0;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px; }
-    .body #experiences .block-experience .block-experience_description .list-off {
-      display: none; }
+  .body #experiences .head-compagny {
+    display: grid;
+    justify-content: center; }
+    .body #experiences .head-compagny .company-logo {
+      width: 250px;
+      margin-bottom: 1.5rem; }
+      .body #experiences .head-compagny .company-logo .logo {
+        width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

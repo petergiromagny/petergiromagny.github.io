@@ -5,16 +5,9 @@
 //$green-1-hex: #04BF9D
 //$green-2-hex: #04D98B
 
-$purple: #330867
-$blue: #316296
-$cyan: #30cfd0
-
-/* Color Theme Swatches in RGBA */
-$blue-1-rgba: rgba(3,72,115, .3)
-$blue-2-rgba: rgba(2,40,64, .3)
-$blue-3-rgba: rgba(3,150,166, .3)
-$green-1-rgba: rgba(4,191,157, .3)
-$green-2-rgba: rgba(4,217,139, .3)
+$purple: #0971B3
+$cyan: #024082
+$background-color: #F2F2F2
 
 $text-color : #000000
 
@@ -48,6 +41,8 @@ $link-transition: 0.2s
   background: -webkit-linear-gradient($direction, $color-stops)
   background: linear-gradient($direction, $color-stops)
 
+
+
 a
   text-decoration: none
   transition: $link-transition
@@ -57,16 +52,33 @@ a:hover
   transition: $link-transition
 
 header
-  .col-left
-    text-align: right
+  background-color: $background-color
+  .font-style
     font-family: $second-font
     font-weight: $muli-bold
-    .link-left
-      margin: 1rem 0
-      a
-        margin: 0 2.5rem
-      a:hover
-        color: $cyan
+
+  .col-left
+    text-align: right
+
+  .link
+    margin: 1rem 0
+    a
+      margin: 0 2.5rem
+      position: relative
+    a:hover
+      color: #000000
+    a::before
+      content: ""
+      position: absolute
+      bottom: 0
+      opacity: 0
+      height: 3px
+      width: 100%
+      background-color: $cyan
+      transition: opacity $link-transition
+    a:hover::before
+      opacity: 1
+      transition: opacity $link-transition
 
   .col-middle
     text-align: center
@@ -74,24 +86,17 @@ header
       font-family: $first-font
       a
         color: $cyan
+        transition: $link-transition
       a:hover
-        color: $purple
+        //color: $purple
+        transition: $link-transition
+        text-shadow: 0 3px 5px $shadow1
 
   .col-right
     text-align: left
-    font-family: $second-font
-    font-weight: $muli-bold
-    .link-right
-      margin: 1rem 0
-      a
-        margin: 0 2.5rem
-      a:hover
-        color: $cyan
 
   .border-bottom
-    border-bottom-width: 2px !important
-    border-bottom-style: solid !important
-    border-bottom-color: $cyan !important
+    +boxshadow-bottom($shadow1)
 
 .body
   font-family: $second-font
@@ -121,9 +126,8 @@ header
           text-align: center
       blockquote
         font-style: italic
-        +linear-gradient($cyan, $purple)
+        background-color: $background-color
         +boxshadow-bottom($shadow1)
-        color: #FFFFFF
         border-radius: 8px
         padding: 1rem 15rem
         p
@@ -136,50 +140,16 @@ header
       margin-top: 2rem
       margin-bottom: 2rem
       img
-        width: 200px
+        width: 250px
       h4
         font-weight: $muli-bold
 
   #experiences
-    .block-experience
-      +boxshadow-basic($shadow1)
-      border-radius: 10px
-
-      .block-experience_logo
-        display: grid
-        justify-content: center
-        padding: 1rem
-        min-height: 220px
+    .head-compagny
+      display: grid
+      justify-content: center
+      .company-logo
+        width: 250px
+        margin-bottom: 1.5rem
         .logo
-          width: 250px
-          margin: auto
-
-      .block-experience_title
-        text-align: center
-        padding: 1rem
-
-      .block-experience_description
-        .link-list
-          display: flex
-          text-align: center
-        .drop
-          padding: .5rem
-          color: $purple
-          width: 50%
-        .drop-on
-          border: 2px solid $blue
-          border-bottom: 0
-        .drop-off
-          border-bottom: 2px solid $blue
-        .drop-right-on
-          border-top-right-radius: 5px
-        .drop-left-on
-          border-top-left-radius: 5px
-
-        .list-on
-          border: 2px solid $blue
-          border-top: 0
-          border-bottom-left-radius: 5px
-          border-bottom-right-radius: 5px
-        .list-off
-          display: none
+          width: 100%
