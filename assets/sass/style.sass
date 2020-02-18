@@ -1,12 +1,5 @@
-/* Color Theme Swatches in Hex */
-//$blue-1-hex: #034873
-//$blue-2-hex: #022840
-//$blue-3-hex: #0396A6
-//$green-1-hex: #04BF9D
-//$green-2-hex: #04D98B
-
-$purple: #0971B3
-$cyan: #024082
+$blue2: #0971B3
+$blue: #0460D9
 $background-color: #F2F2F2
 
 $text-color : #000000
@@ -41,7 +34,10 @@ $link-transition: 0.2s
   background: -webkit-linear-gradient($direction, $color-stops)
   background: linear-gradient($direction, $color-stops)
 
-
+.shadow-bottom
+  +boxshadow-bottom($shadow1)
+.shadow-basic
+  +boxshadow-basic($shadow1)
 
 a
   text-decoration: none
@@ -74,7 +70,7 @@ header
       opacity: 0
       height: 3px
       width: 100%
-      background-color: $cyan
+      background-color: $blue
       transition: opacity $link-transition
     a:hover::before
       opacity: 1
@@ -85,10 +81,10 @@ header
     h1
       font-family: $first-font
       a
-        color: $cyan
+        color: $blue
         transition: $link-transition
       a:hover
-        //color: $purple
+        //color: $blue2
         transition: $link-transition
         text-shadow: 0 3px 5px $shadow1
 
@@ -102,16 +98,34 @@ header
   font-family: $second-font
   margin-top: 3rem
   margin-bottom: 3rem
+  .head-title
+    background-color: $blue
+    color: #FFFFFF
+    padding: 5rem 1.5rem 13rem 1.5rem
+    h2
+      text-align: center
+  .box-container
+    margin-top: -11rem
+    border-radius: 10px
+    background-color: #FFFFFF
+    .section-logo
+      margin: 2rem auto
+      width: 250px
+      //margin-bottom: 1.5rem
+      .logo
+        width: 100%
+    .section-title
+      text-align: center
+
   #introduction
     .circle-img
       display: grid
       justify-content: center
       img
         width: 350px
-        border: 6px solid $cyan
+        border: 6px solid $blue
         border-radius: 50%
-        background-color: $cyan
-        +boxshadow-basic($shadow1)
+        background-color: $blue
 
     .description
       margin-top: 3rem
@@ -127,7 +141,6 @@ header
       blockquote
         font-style: italic
         background-color: $background-color
-        +boxshadow-bottom($shadow1)
         border-radius: 8px
         padding: 1rem 15rem
         p
@@ -145,11 +158,14 @@ header
         font-weight: $muli-bold
 
   #experiences
+    .row
+      margin-top: 2rem
+      margin-bottom: 2rem
     .head-compagny
       display: grid
       justify-content: center
-      .company-logo
-        width: 250px
-        margin-bottom: 1.5rem
-        .logo
-          width: 100%
+
+    .section-list1, .section-list2
+      margin-top: 1rem
+      h6
+        text-align: center

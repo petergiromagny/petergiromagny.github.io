@@ -1,6 +1,15 @@
-/* Color Theme Swatches in Hex */
 /* Font style */
 @import url("https://use.typekit.net/and7wxf.css");
+.shadow-bottom {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
+
+.shadow-basic {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+
 a {
   text-decoration: none;
   transition: 0.2s;
@@ -31,7 +40,7 @@ header {
       opacity: 0;
       height: 3px;
       width: 100%;
-      background-color: #024082;
+      background-color: #0460D9;
       transition: opacity 0.2s; }
     header .link a:hover::before {
       opacity: 1;
@@ -41,7 +50,7 @@ header {
     header .col-middle h1 {
       font-family: permanent-marker, sans-serif; }
       header .col-middle h1 a {
-        color: #024082;
+        color: #0460D9;
         transition: 0.2s; }
       header .col-middle h1 a:hover {
         transition: 0.2s;
@@ -57,17 +66,31 @@ header {
   font-family: muli, sans-serif;
   margin-top: 3rem;
   margin-bottom: 3rem; }
+  .body .head-title {
+    background-color: #0460D9;
+    color: #FFFFFF;
+    padding: 5rem 1.5rem 13rem 1.5rem; }
+    .body .head-title h2 {
+      text-align: center; }
+  .body .box-container {
+    margin-top: -11rem;
+    border-radius: 10px;
+    background-color: #FFFFFF; }
+    .body .box-container .section-logo {
+      margin: 2rem auto;
+      width: 250px; }
+      .body .box-container .section-logo .logo {
+        width: 100%; }
+    .body .box-container .section-title {
+      text-align: center; }
   .body #introduction .circle-img {
     display: grid;
     justify-content: center; }
     .body #introduction .circle-img img {
       width: 350px;
-      border: 6px solid #024082;
+      border: 6px solid #0460D9;
       border-radius: 50%;
-      background-color: #024082;
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+      background-color: #0460D9; }
   .body #introduction .description {
     margin-top: 3rem; }
     .body #introduction .description .description-title {
@@ -82,9 +105,6 @@ header {
     .body #introduction .description blockquote {
       font-style: italic;
       background-color: #F2F2F2;
-      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-      -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
       border-radius: 8px;
       padding: 1rem 15rem; }
       .body #introduction .description blockquote p {
@@ -99,13 +119,15 @@ header {
         width: 250px; }
       .body #educations .row h4 {
         font-weight: 700; }
+  .body #experiences .row {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
   .body #experiences .head-compagny {
     display: grid;
     justify-content: center; }
-    .body #experiences .head-compagny .company-logo {
-      width: 250px;
-      margin-bottom: 1.5rem; }
-      .body #experiences .head-compagny .company-logo .logo {
-        width: 100%; }
+  .body #experiences .section-list1, .body #experiences .section-list2 {
+    margin-top: 1rem; }
+    .body #experiences .section-list1 h6, .body #experiences .section-list2 h6 {
+      text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
