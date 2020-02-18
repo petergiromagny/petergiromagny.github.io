@@ -48,36 +48,15 @@ a:hover
   transition: $link-transition
 
 header
-  background-color: $background-color
+  //position: fixed
+  //z-index: 999
+  padding-top: 1rem
   .font-style
     font-family: $second-font
     font-weight: $muli-bold
 
   .col-left
-    text-align: right
-
-  .link
-    margin: 1rem 0
-    a
-      margin: 0 2.5rem
-      position: relative
-    a:hover
-      color: #000000
-    a::before
-      content: ""
-      position: absolute
-      bottom: 0
-      opacity: 0
-      height: 3px
-      width: 100%
-      background-color: $blue
-      transition: opacity $link-transition
-    a:hover::before
-      opacity: 1
-      transition: opacity $link-transition
-
-  .col-middle
-    text-align: center
+    text-align: left
     h1
       font-family: $first-font
       a
@@ -89,15 +68,18 @@ header
         text-shadow: 0 3px 5px $shadow1
 
   .col-right
-    text-align: left
+    text-align: right
+    .link > a
+      font-size: 10px
+    .btn-contact
+      border: 1.5px solid $blue
+      border-radius: 5px
+      padding: .5rem
 
-  .border-bottom
-    +boxshadow-bottom($shadow1)
 
 .body
   font-family: $second-font
-  margin-top: 3rem
-  margin-bottom: 3rem
+  height: 100%
   .head-title
     background-color: $blue
     color: #FFFFFF
@@ -118,17 +100,19 @@ header
       text-align: center
 
   #introduction
+    min-height: 100vh
+    position: relative
     .circle-img
       display: grid
       justify-content: center
       img
-        width: 350px
+        width: 250px
         border: 6px solid $blue
         border-radius: 50%
         background-color: $blue
 
     .description
-      margin-top: 3rem
+      margin-top: 1.5rem
       .description-title
         margin-bottom: 2.5rem
         h2
@@ -148,7 +132,7 @@ header
           margin-bottom: 0
 
   #educations
-    margin: 4.5rem 0
+    margin-bottom: 4.5rem
     .row
       margin-top: 2rem
       margin-bottom: 2rem

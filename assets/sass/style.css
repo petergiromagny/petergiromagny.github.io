@@ -20,52 +20,32 @@ a:hover {
   transition: 0.2s; }
 
 header {
-  background-color: #F2F2F2; }
+  padding-top: 1rem; }
   header .font-style {
     font-family: muli, sans-serif;
     font-weight: 700; }
   header .col-left {
-    text-align: right; }
-  header .link {
-    margin: 1rem 0; }
-    header .link a {
-      margin: 0 2.5rem;
-      position: relative; }
-    header .link a:hover {
-      color: #000000; }
-    header .link a::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      opacity: 0;
-      height: 3px;
-      width: 100%;
-      background-color: #0460D9;
-      transition: opacity 0.2s; }
-    header .link a:hover::before {
-      opacity: 1;
-      transition: opacity 0.2s; }
-  header .col-middle {
-    text-align: center; }
-    header .col-middle h1 {
+    text-align: left; }
+    header .col-left h1 {
       font-family: permanent-marker, sans-serif; }
-      header .col-middle h1 a {
+      header .col-left h1 a {
         color: #0460D9;
         transition: 0.2s; }
-      header .col-middle h1 a:hover {
+      header .col-left h1 a:hover {
         transition: 0.2s;
         text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); }
   header .col-right {
-    text-align: left; }
-  header .border-bottom {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
+    text-align: right; }
+    header .col-right .link > a {
+      font-size: 10px; }
+    header .col-right .btn-contact {
+      border: 1.5px solid #0460D9;
+      border-radius: 5px;
+      padding: 0.5rem; }
 
 .body {
   font-family: muli, sans-serif;
-  margin-top: 3rem;
-  margin-bottom: 3rem; }
+  height: 100%; }
   .body .head-title {
     background-color: #0460D9;
     color: #FFFFFF;
@@ -83,35 +63,38 @@ header {
         width: 100%; }
     .body .box-container .section-title {
       text-align: center; }
-  .body #introduction .circle-img {
-    display: grid;
-    justify-content: center; }
-    .body #introduction .circle-img img {
-      width: 350px;
-      border: 6px solid #0460D9;
-      border-radius: 50%;
-      background-color: #0460D9; }
-  .body #introduction .description {
-    margin-top: 3rem; }
-    .body #introduction .description .description-title {
-      margin-bottom: 2.5rem; }
-      .body #introduction .description .description-title h2 {
-        font-family: permanent-marker, sans-serif;
-        font-size: 3rem;
-        text-align: center; }
-      .body #introduction .description .description-title h3 {
-        font-size: 1.5rem;
-        text-align: center; }
-    .body #introduction .description blockquote {
-      font-style: italic;
-      background-color: #F2F2F2;
-      border-radius: 8px;
-      padding: 1rem 15rem; }
-      .body #introduction .description blockquote p {
-        margin-top: 1rem;
-        margin-bottom: 0; }
+  .body #introduction {
+    min-height: 100vh;
+    position: relative; }
+    .body #introduction .circle-img {
+      display: grid;
+      justify-content: center; }
+      .body #introduction .circle-img img {
+        width: 250px;
+        border: 6px solid #0460D9;
+        border-radius: 50%;
+        background-color: #0460D9; }
+    .body #introduction .description {
+      margin-top: 1.5rem; }
+      .body #introduction .description .description-title {
+        margin-bottom: 2.5rem; }
+        .body #introduction .description .description-title h2 {
+          font-family: permanent-marker, sans-serif;
+          font-size: 3rem;
+          text-align: center; }
+        .body #introduction .description .description-title h3 {
+          font-size: 1.5rem;
+          text-align: center; }
+      .body #introduction .description blockquote {
+        font-style: italic;
+        background-color: #F2F2F2;
+        border-radius: 8px;
+        padding: 1rem 15rem; }
+        .body #introduction .description blockquote p {
+          margin-top: 1rem;
+          margin-bottom: 0; }
   .body #educations {
-    margin: 4.5rem 0; }
+    margin-bottom: 4.5rem; }
     .body #educations .row {
       margin-top: 2rem;
       margin-bottom: 2rem; }
