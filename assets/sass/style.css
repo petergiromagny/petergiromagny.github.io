@@ -1,5 +1,4 @@
 /* Font style */
-@import url("https://use.typekit.net/and7wxf.css");
 .shadow-bottom {
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
@@ -37,8 +36,8 @@ header {
   header .col-right {
     text-align: right; }
     header .col-right .link > a {
-      font-size: 10px; }
-    header .col-right .btn-contact {
+      font-size: 15px; }
+    header .col-right .btn-contact_a {
       border: 1.5px solid #0460D9;
       border-radius: 5px;
       padding: 0.5rem; }

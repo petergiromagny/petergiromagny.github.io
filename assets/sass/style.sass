@@ -1,20 +1,15 @@
-$blue2: #0971B3
-$blue: #0460D9
-$background-color: #F2F2F2
-
-$text-color : #000000
-
-$shadow1: rgba(0, 0, 0, 0.4)
-
 /* Font style */
-@import url("https://use.typekit.net/and7wxf.css")
-
 $first-font : permanent-marker, sans-serif
 $second-font : muli, sans-serif
-
 $muli-regular: 400
 $muli-bold: 700
 $muli-black: 900
+
+$color2: #0971B3
+$color1: #0460D9
+$back1: #F2F2F2
+$text-color : #000000
+$shadow: rgba(0, 0, 0, 0.4)
 
 $open-transition: ease-in 0.5s
 $link-transition: 0.2s
@@ -35,9 +30,9 @@ $link-transition: 0.2s
   background: linear-gradient($direction, $color-stops)
 
 .shadow-bottom
-  +boxshadow-bottom($shadow1)
+  +boxshadow-bottom($shadow)
 .shadow-basic
-  +boxshadow-basic($shadow1)
+  +boxshadow-basic($shadow)
 
 a
   text-decoration: none
@@ -60,19 +55,19 @@ header
     h1
       font-family: $first-font
       a
-        color: $blue
+        color: $color1
         transition: $link-transition
       a:hover
-        //color: $blue2
+        //color: $color2
         transition: $link-transition
-        text-shadow: 0 3px 5px $shadow1
+        text-shadow: 0 3px 5px $shadow
 
   .col-right
     text-align: right
     .link > a
-      font-size: 10px
-    .btn-contact
-      border: 1.5px solid $blue
+      font-size: 15px
+    .btn-contact_a
+      border: 1.5px solid $color1
       border-radius: 5px
       padding: .5rem
 
@@ -81,7 +76,7 @@ header
   font-family: $second-font
   height: 100%
   .head-title
-    background-color: $blue
+    background-color: $color1
     color: #FFFFFF
     padding: 5rem 1.5rem 13rem 1.5rem
     h2
@@ -107,9 +102,9 @@ header
       justify-content: center
       img
         width: 250px
-        border: 6px solid $blue
+        border: 6px solid $color1
         border-radius: 50%
-        background-color: $blue
+        background-color: $color1
 
     .description
       margin-top: 1.5rem
@@ -124,7 +119,7 @@ header
           text-align: center
       blockquote
         font-style: italic
-        background-color: $background-color
+        background-color: $back1
         border-radius: 8px
         padding: 1rem 15rem
         p
