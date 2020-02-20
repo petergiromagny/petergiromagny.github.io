@@ -1,9 +1,12 @@
 /* Font style */
-$first-font : permanent-marker, sans-serif
-$second-font : muli, sans-serif
-$muli-regular: 400
-$muli-bold: 700
-$muli-black: 900
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i|Roboto+Slab:700&display=swap')
+$first-font : Roboto Slab, serif
+$second-font : Montserra, sans-serif
+$regular: 400
+$regular-italic: 400i
+$bold: 600
+$bold-italic: 600i
+$black: 700
 
 $color2: #0971B3
 $color1: #0460D9
@@ -48,7 +51,7 @@ header
   padding-top: 1rem
   .font-style
     font-family: $second-font
-    font-weight: $muli-bold
+    font-weight: $bold
 
   .col-left
     text-align: left
@@ -56,20 +59,28 @@ header
       font-family: $first-font
       a
         color: $color1
-        transition: $link-transition
+        transition: .5s
       a:hover
         //color: $color2
         transition: $link-transition
         text-shadow: 0 3px 5px $shadow
 
   .col-right
-    text-align: right
-    .link > a
-      font-size: 15px
+    justify-content: end
+    display: grid
+    .link
+      margin-right: 1rem
+      a
+        font-size: 15px
     .btn-contact_a
       border: 1.5px solid $color1
       border-radius: 5px
       padding: .5rem
+      transition: $link-transition
+    .btn-contact_a:hover
+      background-color: $color1
+      color: #FFFFFF
+      transition: $link-transition
 
 
 .body
@@ -134,7 +145,7 @@ header
       img
         width: 250px
       h4
-        font-weight: $muli-bold
+        font-weight: $bold
 
   #experiences
     .row

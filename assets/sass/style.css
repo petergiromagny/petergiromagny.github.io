@@ -1,4 +1,5 @@
 /* Font style */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i|Roboto+Slab:700&display=swap");
 .shadow-bottom {
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
@@ -21,29 +22,37 @@ a:hover {
 header {
   padding-top: 1rem; }
   header .font-style {
-    font-family: muli, sans-serif;
-    font-weight: 700; }
+    font-family: Montserra, sans-serif;
+    font-weight: 600; }
   header .col-left {
     text-align: left; }
     header .col-left h1 {
-      font-family: permanent-marker, sans-serif; }
+      font-family: Roboto Slab, serif; }
       header .col-left h1 a {
         color: #0460D9;
-        transition: 0.2s; }
+        transition: 0.5s; }
       header .col-left h1 a:hover {
         transition: 0.2s;
         text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); }
   header .col-right {
-    text-align: right; }
-    header .col-right .link > a {
-      font-size: 15px; }
+    justify-content: end;
+    display: grid; }
+    header .col-right .link {
+      margin-right: 1rem; }
+      header .col-right .link a {
+        font-size: 15px; }
     header .col-right .btn-contact_a {
       border: 1.5px solid #0460D9;
       border-radius: 5px;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      transition: 0.2s; }
+    header .col-right .btn-contact_a:hover {
+      background-color: #0460D9;
+      color: #FFFFFF;
+      transition: 0.2s; }
 
 .body {
-  font-family: muli, sans-serif;
+  font-family: Montserra, sans-serif;
   height: 100%; }
   .body .head-title {
     background-color: #0460D9;
@@ -78,7 +87,7 @@ header {
       .body #introduction .description .description-title {
         margin-bottom: 2.5rem; }
         .body #introduction .description .description-title h2 {
-          font-family: permanent-marker, sans-serif;
+          font-family: Roboto Slab, serif;
           font-size: 3rem;
           text-align: center; }
         .body #introduction .description .description-title h3 {
@@ -100,7 +109,7 @@ header {
       .body #educations .row img {
         width: 250px; }
       .body #educations .row h4 {
-        font-weight: 700; }
+        font-weight: 600; }
   .body #experiences .row {
     margin-top: 2rem;
     margin-bottom: 2rem; }
