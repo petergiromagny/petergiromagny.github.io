@@ -5,21 +5,26 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/sass/style.css">
+    <link rel="icon" href="assets/img/PG.ico">
     <title>Peter GIROMAGNY</title>
 </head>
 <body>
 
-<header id="top-page">
+<header id="top-page" class="shadow-header">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-left">
-                <h1><a href="#top-page">PG</a></h1>
+                <div id="link">
+                    <div class="row">
+                        <a href="#" class="link-btn">About me</a>
+                        <a href="#" class="link-btn">Skills</a>
+                        <a href="#" class="link-btn">Portfolio</a>
+                    </div>
+                </div>
+                <!--<h1><a href="#top-page">PG</a></h1>-->
             </div>
             <div class="col-md-6 col-right">
                 <div class="row">
-                    <div class="link">
-                        <a href="#">Portfolio</a>
-                    </div>
                     <div class="btn-contact">
                         <a href="#" class="btn-contact_a">Contact me</a>
                     </div>
@@ -32,16 +37,16 @@
 <div class="body">
 
     <div id="introduction" class="container">
+        <div class="description-title">
+            <h2>Peter GIROMAGNY</h2>
+            <h3>Student in 3<sup>rd</sup> year of IT engineer</h3>
+        </div>
         <div id="container-img">
             <div class="circle-img" id="inner">
                 <img src="assets/img/home_profil.png" class="shadow-bottom" alt="Peter Giromagny">
             </div>
         </div>
         <div class="description">
-            <div class="description-title">
-                <h2>Peter GIROMAGNY</h2>
-                <h3>Student in 3<sup>rd</sup> year of IT engineer</h3>
-            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias asperiores aut dolore dolorem facere fugit hic in iste, itaque mollitia porro qui quia quod tempora voluptas voluptatem! Amet, inventore!</p>
             <p>I am open-minded, adaptable and creative. I am completely dedicated to innovative
                 web development.</p>
@@ -52,78 +57,97 @@
         </div>
     </div>
 
-    <div id="educations">
-        <div class="head-title">
-            <h2>My education</h2>
-        </div>
-        <div class="container box-container shadow-bottom">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-logo">
-                        <img src="assets/img/cesi_logo.png" class="logo" alt="Cesi">
-                    </div>
-                    <div class="section-title">
-                        <h4>Cesi engineering school specializing in IT</h4>
-                        <h6>2016 to 2021 | Aix-en-Provence, France</h6>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad blanditiis, cumque delectus et ex explicabo impedit, molestiae mollitia officia, perferendis possimus quae quod reiciendis totam unde voluptatibus! Laborum, reprehenderit.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Methodology PBL (Problem Based Learning)</li>
-                                <li>Learning in total autonomy</li>
-                            </ul>
+    <div id="educations" class="container ">
+        <div class="row">
+            <div class="col-md-6 container-timeline">
+                <h4>Eductions</h4>
+                <div class="timeline">
+                    <div class="timeline-right">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Cesi IT Engineer School</h5>
+                                <h6>Aix-en-Provence | France</h6>
+                            </div>
+                            <div class="col-md-4 btn-position">
+                                <button class="btn-more" id="btn-information">More</button>
+                                <button class="btn-less" id="btn-close">Less</button>
+                            </div>
+                            <div id="modal-more" class="modal-class">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores aut cum est et eveniet harum id laborum libero odio officiis placeat praesentium quisquam rerum sequi tempora, voluptatibus? Obcaecati, reprehenderit!</p>
+                            </div>
                         </div>
                     </div>
-
+                    <div class="timeline-right">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>High School Victor Hugo</h5>
+                                <h6>Port-gentil | Gabon</h6>
+                            </div>
+                            <div class="col-md-4 btn-position">
+                                <button class="btn-more" id="btn-information">More</button>
+                                <button class="btn-less" id="btn-close">Less</button>
+                            </div>
+                            <div id="modal-more" class="modal-class">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores aut cum est et eveniet harum id laborum libero odio officiis placeat praesentium quisquam rerum sequi tempora, voluptatibus? Obcaecati, reprehenderit!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 container-timeline">
+                <h4>Experiences</h4>
+                <div class="timeline">
+                    <div class="timeline-right">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>La Ligne Web</h5>
+                                <h6>Aix-en-Provence | France</h6>
+                            </div>
+                            <div class="col-md-4 btn-position">
+                                <button class="btn-more" id="btn-information">More</button>
+                                <button class="btn-less" id="btn-close">Less</button>
+                            </div>
+                            <div id="modal-more" class="modal-class">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores aut cum est et eveniet harum id laborum libero odio officiis placeat praesentium quisquam rerum sequi tempora, voluptatibus? Obcaecati, reprehenderit!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-right">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>E-PARTENAIRE</h5>
+                                <h6>Aix-en-Provence | France</h6>
+                            </div>
+                            <div class="col-md-4 btn-position">
+                                <button class="btn-more" id="btn-information">More</button>
+                                <button class="btn-less" id="btn-close">Less</button>
+                            </div>
+                            <div id="modal-more" class="modal-class">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores aut cum est et eveniet harum id laborum libero odio officiis placeat praesentium quisquam rerum sequi tempora, voluptatibus? Obcaecati, reprehenderit!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-right">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Iniva</h5>
+                                <h6>Miami | United-States</h6>
+                            </div>
+                            <div class="col-md-4 btn-position">
+                                <button class="btn-more" id="btn-information">More</button>
+                                <button class="btn-less" id="btn-close">Less</button>
+                            </div>
+                            <div id="modal-more" class="modal-class">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores aut cum est et eveniet harum id laborum libero odio officiis placeat praesentium quisquam rerum sequi tempora, voluptatibus? Obcaecati, reprehenderit!</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="experiences">
-        <div class="head-title">
-            <h2>My experiences</h2>
-        </div>
-        <div class="container box-container shadow-bottom">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="head-compagny col-md-12">
-                        <div class="section-logo">
-                            <img src="assets/img/llw_logo.jpeg" class="logo" alt="la ligne web">
-                        </div>
-                        <div class="section-title">
-                            <h4>La Ligne Web</h4>
-                            <h6>Web Agency | Aix-en-Provence</h6>
-                            <a href="https://www.la-ligne-web.com/">La Ligne Web</a>
-                        </div>
-                    </div>
-                    <div class="section-list1">
-                        <div>
-                            <h6>My missions</h6>
-                            <ul>
-                                <li>Created website</li>
-                                <li>Modified website</li>
-                                <li>Debugging website</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="section-list2">
-                        <div>
-                            <h6>Technologies used</h6>
-                            <ul>
-                                <li>HTML/CSS</li>
-                                <li>Prestashop</li>
-                                <li>JS</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div id="skills"></div>
 </div>
 

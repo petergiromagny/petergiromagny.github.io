@@ -84,3 +84,60 @@
     container.onmouseenter = onMouseEnterHandler;
 })();
 
+/*--------------nav link active--------------*/
+
+// Get the container element
+var btnContainer = document.getElementById("link");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("link-btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+
+        // If there's no active class
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+        }
+
+        // Add the active class to the current/clicked button
+        this.className += " active";
+    });
+}
+
+/*--------------more information about me active--------------*/
+
+// Get the modal
+var modal = document.getElementsByClassName("modal-more");
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("btn-information");
+var close = document.getElementsByClassName("btn-close");
+
+for (var i = 0; i < btns.length; i++) {
+    btn.onclick = function() {
+        modal.style.display = "block";
+        btn.style.display = "none";
+        close.style.display = "block"
+    }
+
+    close.onclick = function() {
+        modal.style.display = "none";
+        close.style.display = "none";
+        btn.style.display = "block"
+    }
+}
+
+/*btn.onclick = function() {
+    modal.style.display = "block";
+    btn.style.display = "none";
+    close.style.display = "block"
+}
+
+close.onclick = function() {
+    modal.style.display = "none";
+    close.style.display = "none";
+    btn.style.display = "block"
+}*/
