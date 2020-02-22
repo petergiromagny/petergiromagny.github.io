@@ -40,7 +40,8 @@ header {
       margin-right: 1rem; }
       header .col-left #link .link-btn {
         margin-right: 1rem;
-        position: relative; }
+        position: relative;
+        font-weight: 600; }
       header .col-left #link .link-btn::before {
         content: "";
         position: absolute;
@@ -103,8 +104,13 @@ header {
     .body .box-container .section-title {
       text-align: center; }
   .body #introduction {
-    margin: 5rem auto 3rem auto;
+    min-height: 100vh;
+    margin-top: 5rem;
     position: relative; }
+    .body #introduction .align-vertical {
+      position: absolute;
+      margin: 0;
+      top: 50%; }
     .body #introduction .description-title {
       margin-bottom: 2.5rem; }
       .body #introduction .description-title h2 {
@@ -132,51 +138,77 @@ header {
         .body #introduction .description blockquote p {
           margin-top: 1rem;
           margin-bottom: 0; }
-  .body #educations .container-timeline {
-    border-left: 0.2rem solid #0460D9; }
-    .body #educations .container-timeline h4 {
-      margin-left: 7px;
-      margin-bottom: 1.5rem; }
-    .body #educations .container-timeline .timeline {
-      position: relative; }
-      .body #educations .container-timeline .timeline .timeline-right {
-        margin: 0 1.5rem 2rem 1.5rem;
-        border-left: 0.2rem solid #0460D9;
-        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        border-radius: 10px;
-        padding: 1rem;
-        transition: 0.3s; }
-      .body #educations .container-timeline .timeline .timeline-right:hover {
-        transition: 0.3s;
-        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
-      .body #educations .container-timeline .timeline .modal-class {
-        display: none;
-        margin: 1rem 0 1rem 1rem; }
-    .body #educations .container-timeline .btn-position {
-      display: grid;
-      justify-content: center; }
-      .body #educations .container-timeline .btn-position .btn-more {
-        border: 1.5px solid #0460D9;
-        border-radius: 5px;
-        padding: 1rem;
-        transition: 0.2s; }
-      .body #educations .container-timeline .btn-position .btn-more:hover {
-        background-color: #0460D9;
-        color: #FFFFFF;
-        transition: 0.2s; }
-      .body #educations .container-timeline .btn-position .btn-less {
-        display: none;
-        border: 1.5px solid #0460D9;
-        border-radius: 5px;
-        padding: 1rem;
-        transition: 0.2s; }
-      .body #educations .container-timeline .btn-position .btn-less:hover {
-        background-color: #0460D9;
-        color: #FFFFFF;
-        transition: 0.2s; }
+  .body #educations {
+    margin-bottom: 5rem; }
+    .body #educations .container-timeline {
+      border-left: 0.2rem solid #0460D9; }
+      .body #educations .container-timeline h4 {
+        margin: auto 0.5rem; }
+      .body #educations .container-timeline .fas {
+        margin: auto 1rem;
+        font-size: 25px; }
+      .body #educations .container-timeline .timeline {
+        margin-top: 1.5rem; }
+        .body #educations .container-timeline .timeline .timeline-right {
+          position: relative;
+          margin: 0 1.5rem 2rem 1.5rem;
+          border-left: 0.2rem solid #0460D9;
+          -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          padding: 1rem;
+          transition: 0.3s; }
+        .body #educations .container-timeline .timeline .timeline-right:hover {
+          transition: 0.3s;
+          -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
+        .body #educations .container-timeline .timeline .timeline-right:before {
+          content: "";
+          z-index: 1;
+          position: absolute;
+          left: -45px;
+          top: 1.6rem;
+          width: 45px;
+          height: 2px;
+          background-color: #0460D9; }
+        .body #educations .container-timeline .timeline .timeline-right:after {
+          content: "";
+          z-index: 2;
+          position: absolute;
+          left: -49.3px;
+          top: 22px;
+          width: 12px;
+          height: 12px;
+          border: 1px solid #0460D9;
+          border-radius: 50%;
+          background-color: #EBF2FE; }
+        .body #educations .container-timeline .timeline .modal-class {
+          display: none;
+          margin: 1rem 0 1rem 1rem; }
+      .body #educations .container-timeline .btn-position {
+        margin: auto; }
+        .body #educations .container-timeline .btn-position .btn-more {
+          border: 1.5px solid #0460D9;
+          border-radius: 5px;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          transition: 0.2s; }
+        .body #educations .container-timeline .btn-position .btn-more:hover {
+          background-color: #0460D9;
+          color: #FFFFFF;
+          transition: 0.2s; }
+        .body #educations .container-timeline .btn-position .btn-less {
+          display: none;
+          border: 1.5px solid #0460D9;
+          border-radius: 5px;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          transition: 0.2s; }
+        .body #educations .container-timeline .btn-position .btn-less:hover {
+          background-color: #0460D9;
+          color: #FFFFFF;
+          transition: 0.2s; }
 
 /*# sourceMappingURL=style.css.map */

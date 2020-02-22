@@ -79,6 +79,7 @@ header
       .link-btn
         margin-right: 1rem
         position: relative
+        font-weight: $bold
       .link-btn::before
         +under-link($color1, 3px, 50%, 0)
       .link-btn:hover::before
@@ -122,10 +123,13 @@ header
       text-align: center
 
   #introduction
-    //min-height: 100vh
-    margin: 5rem auto 3rem auto
+    min-height: 100vh
+    margin-top: 5rem
     position: relative
-
+    .align-vertical
+      position: absolute
+      margin: 0
+      top: 50%
     .description-title
       margin-bottom: 2.5rem
       h2
@@ -157,15 +161,20 @@ header
           margin-top: 1rem
           margin-bottom: 0
 
+
   #educations
+    margin-bottom: 5rem
     .container-timeline
       border-left: .2rem solid $color1
       h4
-        margin-left: 7px
-        margin-bottom: 1.5rem
+        margin: auto .5rem
+      .fas
+        margin: auto 1rem
+        font-size: 25px
       .timeline
-        position: relative
+        margin-top: 1.5rem
         .timeline-right
+          position: relative
           margin: 0 1.5rem 2rem 1.5rem
           border-left: .2rem solid $color1
           +boxshadow-basic($shadow2)
@@ -175,16 +184,36 @@ header
         .timeline-right:hover
           transition: .3s
           +boxshadow-bottom($shadow)
+        .timeline-right:before
+          content: ""
+          z-index: 1
+          position: absolute
+          left: -45px
+          top: 1.6rem
+          width: 45px
+          height: 2px
+          background-color: $color1
+        .timeline-right:after
+          content: ""
+          z-index: 2
+          position: absolute
+          left: -49.3px
+          top: 22px
+          width: 12px
+          height: 12px
+          border: 1px solid $color1
+          border-radius: 50%
+          background-color: $back1
         .modal-class
           display: none
           margin: 1rem 0 1rem 1rem
       .btn-position
-        display: grid
-        justify-content: center
+        margin: auto
         .btn-more
           border: 1.5px solid $color1
           border-radius: 5px
-          padding: 1rem
+          padding: .5rem 1rem
+          cursor: pointer
           transition: $link-transition
         .btn-more:hover
           background-color: $color1
@@ -194,7 +223,8 @@ header
           display: none
           border: 1.5px solid $color1
           border-radius: 5px
-          padding: 1rem
+          padding: .5rem 1rem
+          cursor: pointer
           transition: $link-transition
         .btn-less:hover
           background-color: $color1
