@@ -1,6 +1,6 @@
 /*--------------nav link active--------------*/
 
-// Get the container element
+/*// Get the container element
 var btnContainer = document.getElementById("link");
 
 // Get all buttons with class="btn" inside the container
@@ -19,7 +19,7 @@ for (var i = 0; i < btns.length; i++) {
         // Add the active class to the current/clicked button
         this.className += " active";
     });
-}
+}*/
 
 /*--------------more information about me active--------------*/
 

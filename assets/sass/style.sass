@@ -8,12 +8,20 @@ $bold: 600
 $bold-italic: 600i
 $black: 700
 
+/* Color */
 $color2: #0971B3
 $color1: #0460D9
 $back1: #EBF2FE
+$white: #FFFFFF
 $text-color : #000000
 $shadow: rgba(0, 0, 0, 0.4)
 $shadow2: rgba(0, 0, 0, 0.15)
+
+/* Screen size */
+$break-phone: 320px
+$break-small: 1024px
+$break-large: 1280px
+
 
 $open-transition: ease-in 0.5s
 $link-transition: 0.2s
@@ -46,6 +54,24 @@ $link-transition: 0.2s
   opacity: $opacity
   transition: $link-transition
 
+=scrollbars($foreground-color, $background-color: mix($foreground-color, white,  50%))
+
+  &::-webkit-scrollbar
+    width:  10px
+    height: 20px
+
+  &::-webkit-scrollbar-thumb
+    background: $foreground-color
+
+  &::-webkit-scrollbar-track
+    background: $background-color
+
+  &
+    scrollbar-face-color: $foreground-color
+    scrollbar-track-color: $background-color
+
+
+
 .shadow-header
   +boxshadow-basic($shadow2)
 .shadow-bottom
@@ -60,173 +86,196 @@ a
 a:hover
   text-decoration: none
   transition: $link-transition
+body
+  //+scrollbars($color1, $back1)
+  background-color: $color1
 
-header
-  position: fixed
-  z-index: 999
-  background-color: $back1
-  padding: 1rem 0
-  width: 100%
-  top: 0
-  .font-style
-    font-family: $second-font
-    font-weight: $bold
+  header
+    position: fixed
+    z-index: 999
+    padding: 1rem 0
+    width: 100%
+    top: 0
+    background-color: $color1
+    .font-style
+      font-family: $second-font
+      font-weight: $bold
 
-  .col-left
-    text-align: left
-    #link
-      margin-right: 1rem
+    .col-left
+      padding-left: 3rem
       .link-btn
-        margin-right: 1rem
-        position: relative
-        font-weight: $bold
-      .link-btn::before
-        +under-link($color1, 3px, 50%, 0)
-      .link-btn:hover::before
-        opacity: 1
-      .link-btn.active::before
-        +under-link($color1, 3px, 50%, 1)
+        color: $back1
+        .fas
+          font-size: 25px
 
-  .col-right
-    justify-content: end
-    display: grid
-    .btn-contact_a
-      border: 1.5px solid $color1
-      border-radius: 5px
-      padding: .5rem
-      transition: $link-transition
-    .btn-contact_a:hover
-      background-color: $color1
+    .col-right
+      margin: auto 0
+      text-align: right
+      padding-right: 3rem
+      .btn-contact_a
+        color: $back1
+        border: 1.5px solid $back1
+        border-radius: 5px
+        padding: .5rem
+        transition: $link-transition
+      .btn-contact_a:hover
+        background-color: $color1
+        color: #FFFFFF
+        transition: $link-transition
+        +boxshadow-basic($shadow)
+      .btn-contact_a:active
+        +boxshadow-basic($shadow2)
+
+
+  .body
+    font-family: $second-font
+    height: 100%
+
+    #introduction
+      min-height: 100vh
+      position: relative
       color: #FFFFFF
-      transition: $link-transition
-      +boxshadow-basic($shadow)
-    .btn-contact_a:active
-      +boxshadow-basic($shadow2)
+      .container-intro
+        position: absolute
+        top: 25%
+      .description-title
+        margin-bottom: 2.5rem
+        h2
+          font-family: $first-font
+          font-size: 3rem
+          text-align: center
+        h3
+          font-size: 1.5rem
+          text-align: center
 
+      #container-img
+        .circle-img
+          display: grid
+          justify-content: center
+          img
+            width: 250px
+            border: 6px solid $back1
+            border-radius: 50%
+            background-color: $back1
 
-.body
-  font-family: $second-font
-  height: 100%
-  .head-title
-    h2
-      text-align: center
-  .box-container
-    border-radius: 10px
-    background-color: #FFFFFF
-    .section-logo
-      margin: 2rem auto
-      width: 250px
-      //margin-bottom: 1.5rem
-      .logo
-        width: 100%
-    .section-title
-      text-align: center
-
-  #introduction
-    min-height: 100vh
-    margin-top: 5rem
-    position: relative
-    .align-vertical
-      position: absolute
-      margin: 0
-      top: 50%
-    .description-title
-      margin-bottom: 2.5rem
-      h2
-        font-family: $first-font
-        font-size: 3rem
-        text-align: center
-      h3
-        font-size: 1.5rem
-        text-align: center
-
-    #container-img
-      .circle-img
-        display: grid
-        justify-content: center
-        img
-          width: 250px
-          border: 6px solid $color1
-          border-radius: 50%
-          background-color: $color1
-
-    .description
-      margin-top: 1.5rem
-      blockquote
-        font-style: italic
-        background-color: $back1
-        border-radius: 8px
-        padding: 1rem 15rem
-        p
-          margin-top: 1rem
-          margin-bottom: 0
-
-
-  #educations
-    margin-bottom: 5rem
-    .container-timeline
-      border-left: .2rem solid $color1
-      h4
-        margin: auto .5rem
-      .fas
-        margin: auto 1rem
-        font-size: 25px
-      .timeline
+      .description
         margin-top: 1.5rem
-        .timeline-right
-          position: relative
-          margin: 0 1.5rem 2rem 1.5rem
-          border-left: .2rem solid $color1
-          +boxshadow-basic($shadow2)
-          border-radius: 10px
-          padding: 1rem
-          transition: .3s
-        .timeline-right:hover
-          transition: .3s
-          +boxshadow-bottom($shadow)
-        .timeline-right:before
-          content: ""
-          z-index: 1
-          position: absolute
-          left: -45px
-          top: 1.6rem
-          width: 45px
-          height: 2px
-          background-color: $color1
-        .timeline-right:after
-          content: ""
-          z-index: 2
-          position: absolute
-          left: -49.3px
-          top: 22px
-          width: 12px
-          height: 12px
-          border: 1px solid $color1
-          border-radius: 50%
+        blockquote
+          font-style: italic
           background-color: $back1
-        .modal-class
-          display: none
-          margin: 1rem 0 1rem 1rem
-      .btn-position
-        margin: auto
-        .btn-more
-          border: 1.5px solid $color1
-          border-radius: 5px
-          padding: .5rem 1rem
-          cursor: pointer
-          transition: $link-transition
-        .btn-more:hover
-          background-color: $color1
-          color: #FFFFFF
-          transition: $link-transition
-        .btn-less
-          display: none
-          border: 1.5px solid $color1
-          border-radius: 5px
-          padding: .5rem 1rem
-          cursor: pointer
-          transition: $link-transition
-        .btn-less:hover
-          background-color: $color1
-          color: #FFFFFF
-          transition: $link-transition
+          border-radius: 8px
+          padding: 1rem 15rem
+          p
+            margin-top: 1rem
+            margin-bottom: 0
+
+      .container-scroll
+        position: absolute
+        bottom: 5%
+        left: 50%
+        transform: translate(-50%, -50%)
+        a
+          color: $white
+          h6
+            margin: auto 1rem
+
+    #educations
+      padding: 6rem
+      background-color: #FFFFFF
+
+      .container-timeline
+        border-left: .2rem solid $color1
+        h4
+          margin: auto .5rem
+        .fas
+          margin: auto 1rem
+          font-size: 25px
+        .timeline
+          margin-top: 1.5rem
+          .timeline-right
+            position: relative
+            margin: 0 1.5rem 2rem 1.5rem
+            border-left: .2rem solid $color1
+            +boxshadow-basic($shadow2)
+            border-radius: 10px
+            padding: 1rem
+            transition: .3s
+          .timeline-right:hover
+            transition: .3s
+            +boxshadow-bottom($shadow)
+          .timeline-right:before
+            content: ""
+            z-index: 1
+            position: absolute
+            left: -45px
+            top: 1.6rem
+            width: 45px
+            height: 2px
+            background-color: $color1
+          .timeline-right:after
+            content: ""
+            z-index: 2
+            position: absolute
+            left: -49.3px
+            top: 22px
+            width: 12px
+            height: 12px
+            border: 1px solid $color1
+            border-radius: 50%
+            background-color: $back1
+          .modal-class
+            display: none
+            margin: 1rem 0 1rem 1rem
+        .btn-position
+          margin: auto
+          .btn-more
+            border: 1.5px solid $color1
+            border-radius: 5px
+            padding: .5rem 1rem
+            cursor: pointer
+            transition: $link-transition
+          .btn-more:hover
+            background-color: $color1
+            color: #FFFFFF
+            transition: $link-transition
+          .btn-less
+            display: none
+            border: 1.5px solid $color1
+            border-radius: 5px
+            padding: .5rem 1rem
+            cursor: pointer
+            transition: $link-transition
+          .btn-less:hover
+            background-color: $color1
+            color: #FFFFFF
+            transition: $link-transition
+
+    #skills
+      padding-top: 3rem
+      padding-bottom: 6rem
+      img
+        width: 70px
+      .softskills-head
+        h3
+          text-align: center
+          color: $white
+          margin-bottom: 4rem
+      .softskills-left
+        border-right: 2px solid $back1
+        display: flex
+        justify-content: space-around
+
+      .softskills-right
+        display: flex
+        justify-content: space-around
+
+    #portfolio
+      background-color: $white
+      padding: 5rem 0
+      .box-project
+        margin: auto 2rem
+        .img-head
+          img
+            width: 300px
+        .title
+          text-align: center

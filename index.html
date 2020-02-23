@@ -10,24 +10,16 @@
 </head>
 <body>
 
-<header id="top-page" class="shadow-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-left">
-                <div id="link">
-                    <div class="row">
-                        <a href="#" class="link-btn">About me</a>
-                        <a href="#" class="link-btn">Skills</a>
-                        <a href="#" class="link-btn">Portfolio</a>
-                    </div>
-                </div>
+<header id="top-page" class="">
+    <div class="row">
+        <div class="col-md-6 col-left">
+            <div id="open-menu">
+                <button class="btn link-btn"><i class="fas fa-bars"></i></button>
             </div>
-            <div class="col-md-6 col-right">
-                <div class="row">
-                    <div class="btn-contact">
-                        <a href="#" class="btn-contact_a">Contact me</a>
-                    </div>
-                </div>
+        </div>
+        <div class="col-md-6 col-right">
+            <div class="btn-contact">
+                <a href="#" class="btn-contact_a">Contact me</a>
             </div>
         </div>
     </div>
@@ -35,107 +27,162 @@
 
 <div class="body">
 
-    <div id="introduction" class="container">
-        <div class="description-title">
-            <h2>Peter GIROMAGNY</h2>
-            <h3>Student in 3<sup>rd</sup> year of IT engineer</h3>
-        </div>
-        <div id="container-img">
-            <div class="circle-img" id="inner">
-                <img src="assets/img/home_profil.png" class="shadow-bottom" alt="Peter Giromagny">
+    <div id="introduction">
+        <div class="container container-intro">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="container-img">
+                        <div class="circle-img" id="inner">
+                            <img src="assets/img/home_profil.png" class="shadow-bottom" alt="Peter Giromagny">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="description-title">
+                        <h2>Peter GIROMAGNY</h2>
+                        <h3>Student in 3<sup>rd</sup> year of IT engineer</h3>
+                    </div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias asperiores aut dolore dolorem facere fugit hic in iste, itaque mollitia porro qui quia quod tempora voluptas voluptatem! Amet, inventore!</p>
+                        <p>I am open-minded, adaptable and creative. I am completely dedicated to innovative
+                            web development.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="align-vertical">
-            <div class="description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias asperiores aut dolore dolorem facere fugit hic in iste, itaque mollitia porro qui quia quod tempora voluptas voluptatem! Amet, inventore!</p>
-                <p>I am open-minded, adaptable and creative. I am completely dedicated to innovative
-                    web development.</p>
-                <blockquote class="">
-                    <q>Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites.</q>
-                    <p>Jacob Lett</p>
-                </blockquote>
+        <div class="container-scroll">
+            <a href="">
+                <div class="row">
+                    <i class="fas fa-angle-down"></i>
+                    <h6>Scroll Down</h6>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="educations">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 container-timeline">
+                    <div class="row">
+                        <i class="fas fa-book"></i>
+                        <h4>Eductions</h4>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-right">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>Cesi IT Engineer School</h5>
+                                    <h6>Aix-en-Provence | France</h6>
+                                </div>
+                                <div class="col-md-4 btn-position">
+                                    <a class="btn-more" id="btn-information">More</a>
+                                    <a class="btn-less" id="btn-close">Less</a>
+                                </div>
+                                <div id="modal-more" class="modal-class">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores aut cum est et eveniet harum id laborum libero odio officiis placeat praesentium quisquam rerum sequi tempora, voluptatibus? Obcaecati, reprehenderit!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>High School Victor Hugo</h5>
+                                    <h6>Port-gentil | Gabon</h6>
+                                </div>
+                                <div class="col-md-4 btn-position">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 container-timeline">
+                    <div class="row">
+                        <i class="fas fa-user-tie"></i>
+                        <h4>Experiences</h4>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-right">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>La Ligne Web</h5>
+                                    <h6>Aix-en-Provence | France</h6>
+                                </div>
+                                <div class="col-md-4 btn-position">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>E-PARTENAIRE</h5>
+                                    <h6>Aix-en-Provence | France</h6>
+                                </div>
+                                <div class="col-md-4 btn-position">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>Iniva</h5>
+                                    <h6>Miami | United-States</h6>
+                                </div>
+                                <div class="col-md-4 btn-position">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="educations" class="container ">
+
+    <div id="skills">
+        <div class="softskills-head">
+            <h3>Softskills</h3>
+        </div>
         <div class="row">
-            <div class="col-md-6 container-timeline">
-                <div class="row">
-                    <i class="fas fa-book"></i>
-                    <h4>Eductions</h4>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-right">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>Cesi IT Engineer School</h5>
-                                <h6>Aix-en-Provence | France</h6>
-                            </div>
-                            <div class="col-md-4 btn-position">
-                                <a class="btn-more" id="btn-information">More</a>
-                                <a class="btn-less" id="btn-close">Less</a>
-                            </div>
-                            <div id="modal-more" class="modal-class">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores aut cum est et eveniet harum id laborum libero odio officiis placeat praesentium quisquam rerum sequi tempora, voluptatibus? Obcaecati, reprehenderit!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-right">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>High School Victor Hugo</h5>
-                                <h6>Port-gentil | Gabon</h6>
-                            </div>
-                            <div class="col-md-4 btn-position">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6 softskills-left">
+                <img src="assets/img/css.png" class="img1" alt="css">
+                <img src="assets/img/html.png" class="img2" alt="html">
+                <img src="assets/img/js.png" class="img3" alt="js">
+                <img src="assets/img/sass.png" class="img4" alt="sass">
+                <img src="assets/img/php.png" class="img5" alt="php">
+                <img src="assets/img/mysql.png" alt="mysql">
             </div>
-            <div class="col-md-6 container-timeline">
-                <div class="row">
-                    <i class="fas fa-user-tie"></i>
-                    <h4>Experiences</h4>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-right">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>La Ligne Web</h5>
-                                <h6>Aix-en-Provence | France</h6>
-                            </div>
-                            <div class="col-md-4 btn-position">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-right">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>E-PARTENAIRE</h5>
-                                <h6>Aix-en-Provence | France</h6>
-                            </div>
-                            <div class="col-md-4 btn-position">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-right">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>Iniva</h5>
-                                <h6>Miami | United-States</h6>
-                            </div>
-                            <div class="col-md-4 btn-position">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6 softskills-right">
+                <img src="assets/img/github.png" class="img7" alt="github">
+                <img src="assets/img/phpstorm.png" class="img8" alt="phpstorm">
+                <img src="assets/img/wordpress.png" class="img9" alt="wordpress">
+                <img src="assets/img/prestashop.png" class="img6" alt="prestashop">
+                <img src="assets/img/shopify.png" class="img10" alt="shopify">
             </div>
         </div>
     </div>
 
+    <div id="portfolio">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box-project">
+                    <div class="img-head">
+                        <img src="assets/img/feuofficial.png" alt="feuofficial">
+                    </div>
+                    <div class="title">
+                        <h4>Feu Official</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
 
-    <div id="skills"></div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="assets/js/main.js"></script>
