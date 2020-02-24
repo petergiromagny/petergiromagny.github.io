@@ -74,7 +74,8 @@ body {
       color: #FFFFFF; }
       body .body #introduction .container-intro {
         position: absolute;
-        top: 25%; }
+        top: 25%;
+        left: 25%; }
       body .body #introduction .description-title {
         margin-bottom: 2.5rem; }
         body .body #introduction .description-title h2 {
@@ -158,9 +159,12 @@ body {
             border: 1px solid #0460D9;
             border-radius: 50%;
             background-color: #EBF2FE; }
+          body .body #educations .container-timeline .timeline #modal-more {
+            display: none; }
           body .body #educations .container-timeline .timeline .modal-class {
-            display: none;
-            margin: 1rem 0 1rem 1rem; }
+            margin: 1rem 0 0 1rem; }
+          body .body #educations .container-timeline .timeline .title {
+            margin: 0 1rem; }
         body .body #educations .container-timeline .btn-position {
           margin: auto; }
           body .body #educations .container-timeline .btn-position .btn-more {
@@ -205,8 +209,10 @@ body {
       padding: 5rem 0; }
       body .body #portfolio .box-project {
         margin: auto 2rem; }
-        body .body #portfolio .box-project .img-head img {
+        body .body #portfolio .box-project .img-head {
           width: 300px; }
+          body .body #portfolio .box-project .img-head img {
+            width: 100%; }
         body .body #portfolio .box-project .title {
           text-align: center; }
 
