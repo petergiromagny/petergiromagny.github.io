@@ -74,8 +74,17 @@ body {
       color: #FFFFFF; }
       body .body #introduction .container-intro {
         position: absolute;
-        top: 25%;
-        left: 25%; }
+        top: 25%; }
+        @media screen and (max-width: 1023px) {
+          body .body #introduction .container-intro {
+            position: absolute;
+            top: 25%;
+            left: 10%; } }
+        @media screen and (min-width: 2560px) {
+          body .body #introduction .container-intro {
+            position: absolute;
+            top: 25%;
+            left: 25%; } }
       body .body #introduction .description-title {
         margin-bottom: 2.5rem; }
         body .body #introduction .description-title h2 {
@@ -207,13 +216,33 @@ body {
     body .body #portfolio {
       background-color: #FFFFFF;
       padding: 5rem 0; }
-      body .body #portfolio .box-project {
-        margin: auto 2rem; }
-        body .body #portfolio .box-project .img-head {
-          width: 300px; }
-          body .body #portfolio .box-project .img-head img {
-            width: 100%; }
-        body .body #portfolio .box-project .title {
+      body .body #portfolio .box-project .box1 .img-head {
+        max-width: 370px;
+        margin: 0 auto;
+        border-radius: 7px;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+        body .body #portfolio .box-project .box1 .img-head img {
+          width: 100%;
+          border-radius: 7px; }
+      body .body #portfolio .box-project .box2 {
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        min-height: 355px;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        max-width: 350px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+        body .body #portfolio .box-project .box2 .title {
+          text-align: center; }
+        body .body #portfolio .box-project .box2 a {
+          margin: 0 auto;
+          width: 100%;
+          background-color: #EBF2FE;
+          border-radius: 10px;
           text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
