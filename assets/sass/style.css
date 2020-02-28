@@ -2,10 +2,29 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i|Roboto+Slab:700&display=swap");
 /* Color */
 /* Screen size */
+/* Animation */
+@keyframes anim-contact {
+  from {
+    margin-bottom: -50px;
+    opacity: 0; }
+  to {
+    margin-bottom: 0;
+    opacity: 1; } }
+@keyframes anim-header {
+  from {
+    margin-top: -10%; }
+  to {
+    margin-top: 0%; } }
+@keyframes anim-introduction {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .shadow-header {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: 0.2s; }
 
 .shadow-bottom {
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
@@ -15,7 +34,8 @@
 .shadow-basic {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: 0.2s; }
 
 a {
   text-decoration: none;
@@ -26,6 +46,12 @@ a:hover {
   text-decoration: none;
   transition: 0.2s; }
 
+html {
+  scroll-behavior: smooth; }
+  html .new-row {
+    display: flex;
+    flex-wrap: wrap; }
+
 body {
   background-color: #0460D9; }
   body header {
@@ -34,15 +60,33 @@ body {
     padding: 1rem 0;
     width: 100%;
     top: 0;
-    background-color: #0460D9; }
+    background-color: #0460D9;
+    animation-name: anim-header;
+    animation-duration: 1s; }
     body header .font-style {
       font-family: Montserra, sans-serif;
       font-weight: 600; }
     body header .col-left {
       padding-left: 3rem; }
-      body header .col-left .link-btn {
-        color: #EBF2FE; }
-        body header .col-left .link-btn .fas {
+      body header .col-left .link-btn a {
+        color: #EBF2FE;
+        position: relative;
+        margin: auto 0;
+        padding: 0 1rem 0.15rem 1rem;
+        border-radius: 10px; }
+      body header .col-left .link-btn a:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+        height: 2px;
+        width: 75%;
+        background-color: #EBF2FE;
+        opacity: 1;
+        transition: 0.2s; }
+        body header .col-left .link-btn a:hover:before .fas {
           font-size: 25px; }
     body header .col-right {
       margin: auto 0;
@@ -60,31 +104,27 @@ body {
         transition: 0.2s;
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition: 0.2s; }
       body header .col-right .btn-contact_a:active {
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        transition: 0.2s; }
   body .body {
     font-family: Montserra, sans-serif;
     height: 100%; }
     body .body #introduction {
       min-height: 100vh;
       position: relative;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      animation-name: anim-introduction;
+      animation-duration: 1.5s; }
       body .body #introduction .container-intro {
         position: absolute;
-        top: 25%; }
-        @media screen and (max-width: 1023px) {
-          body .body #introduction .container-intro {
-            position: absolute;
-            top: 25%;
-            left: 10%; } }
-        @media screen and (min-width: 2560px) {
-          body .body #introduction .container-intro {
-            position: absolute;
-            top: 25%;
-            left: 25%; } }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
       body .body #introduction .description-title {
         margin-bottom: 2.5rem; }
         body .body #introduction .description-title h2 {
@@ -121,34 +161,37 @@ body {
           color: #FFFFFF; }
           body .body #introduction .container-scroll a h6 {
             margin: auto 1rem; }
-    body .body #educations {
+    body .body #about {
       padding: 6rem;
       background-color: #FFFFFF; }
-      body .body #educations .container-timeline {
-        border-left: 0.2rem solid #0460D9; }
-        body .body #educations .container-timeline h4 {
+      body .body #about .container-timeline {
+        border-left: 0.2rem solid #0460D9;
+        animation-name: anim-introduction;
+        animation-duration: 1.5s; }
+        body .body #about .container-timeline h4 {
           margin: auto 0.5rem; }
-        body .body #educations .container-timeline .fas {
+        body .body #about .container-timeline .fas {
           margin: auto 1rem;
           font-size: 25px; }
-        body .body #educations .container-timeline .timeline {
+        body .body #about .container-timeline .timeline {
           margin-top: 1.5rem; }
-          body .body #educations .container-timeline .timeline .timeline-right {
+          body .body #about .container-timeline .timeline .timeline-right {
             position: relative;
             margin: 0 1.5rem 2rem 1.5rem;
             border-left: 0.2rem solid #0460D9;
             -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
             -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            transition: 0.2s;
             border-radius: 10px;
             padding: 1rem;
             transition: 0.3s; }
-          body .body #educations .container-timeline .timeline .timeline-right:hover {
+          body .body #about .container-timeline .timeline .timeline-right:hover {
             transition: 0.3s;
             -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
             -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
-          body .body #educations .container-timeline .timeline .timeline-right:before {
+          body .body #about .container-timeline .timeline .timeline-right:before {
             content: "";
             z-index: 1;
             position: absolute;
@@ -157,7 +200,7 @@ body {
             width: 45px;
             height: 2px;
             background-color: #0460D9; }
-          body .body #educations .container-timeline .timeline .timeline-right:after {
+          body .body #about .container-timeline .timeline .timeline-right:after {
             content: "";
             z-index: 2;
             position: absolute;
@@ -168,32 +211,32 @@ body {
             border: 1px solid #0460D9;
             border-radius: 50%;
             background-color: #EBF2FE; }
-          body .body #educations .container-timeline .timeline #modal-more {
+          body .body #about .container-timeline .timeline #modal-more {
             display: none; }
-          body .body #educations .container-timeline .timeline .modal-class {
+          body .body #about .container-timeline .timeline .modal-class {
             margin: 1rem 0 0 1rem; }
-          body .body #educations .container-timeline .timeline .title {
+          body .body #about .container-timeline .timeline .title {
             margin: 0 1rem; }
-        body .body #educations .container-timeline .btn-position {
+        body .body #about .container-timeline .btn-position {
           margin: auto; }
-          body .body #educations .container-timeline .btn-position .btn-more {
+          body .body #about .container-timeline .btn-position .btn-more {
             border: 1.5px solid #0460D9;
             border-radius: 5px;
             padding: 0.5rem 1rem;
             cursor: pointer;
             transition: 0.2s; }
-          body .body #educations .container-timeline .btn-position .btn-more:hover {
+          body .body #about .container-timeline .btn-position .btn-more:hover {
             background-color: #0460D9;
             color: #FFFFFF;
             transition: 0.2s; }
-          body .body #educations .container-timeline .btn-position .btn-less {
+          body .body #about .container-timeline .btn-position .btn-less {
             display: none;
             border: 1.5px solid #0460D9;
             border-radius: 5px;
             padding: 0.5rem 1rem;
             cursor: pointer;
             transition: 0.2s; }
-          body .body #educations .container-timeline .btn-position .btn-less:hover {
+          body .body #about .container-timeline .btn-position .btn-less:hover {
             background-color: #0460D9;
             color: #FFFFFF;
             transition: 0.2s; }
@@ -222,7 +265,8 @@ body {
         border-radius: 7px;
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition: 0.2s; }
         body .body #portfolio .box-project .box1 .img-head img {
           width: 100%;
           border-radius: 7px; }
@@ -230,6 +274,7 @@ body {
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        transition: 0.2s;
         min-height: 355px;
         padding: 1rem 2rem;
         margin: 0 auto;
@@ -244,5 +289,52 @@ body {
           background-color: #EBF2FE;
           border-radius: 10px;
           text-align: center; }
+        body .body #portfolio .box-project .box2 a:hover {
+          -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); }
+        body .body #portfolio .box-project .box2 a:focus {
+          -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          transition: 0.2s; }
+    body .body #contact {
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      transition: 0.2s;
+      padding: 2rem; }
+      body .body #contact .horizontal-border {
+        background-color: #EBF2FE;
+        height: 2px;
+        width: 50%;
+        margin: 0 auto; }
+      body .body #contact .col-contact {
+        padding: 3rem; }
+      body .body #contact .col-contact a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: #FFFFFF;
+        padding: 1rem 0; }
+        body .body #contact .col-contact a .fas, body .body #contact .col-contact a .fab {
+          font-size: 30px;
+          margin-right: 1rem; }
+        body .body #contact .col-contact a h5 {
+          margin: auto 0; }
+      body .body #contact .col-contact a:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+        height: 3px;
+        width: 20%;
+        background-color: #FFFFFF;
+        opacity: 1;
+        transition: 0.2s;
+        animation-duration: 0.5s;
+        animation-name: anim-contact; }
 
 /*# sourceMappingURL=style.css.map */

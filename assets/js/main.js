@@ -40,3 +40,16 @@ close.onclick = function() {
     btn.style.display = "initial"
 };
 
+/*--------------Burger Menu--------------*/
+
+function scrollNav() {
+    $('.nav a').click(function(){
+        //Animate
+        $('html, body').stop().animate({
+            scrollTop: $( $(this).attr('href') ).offset().top - 160
+        }, 400);
+        return false;
+    });
+    $('.scrollTop a').scrollTop();
+}
+scrollNav();

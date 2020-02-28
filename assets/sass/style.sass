@@ -16,12 +16,34 @@ $white: #FFFFFF
 $text-color : #000000
 $shadow: rgba(0, 0, 0, 0.4)
 $shadow2: rgba(0, 0, 0, 0.15)
+$shadow3: rgba(0, 0, 0, 0.05)
 
 /* Screen size */
 $break-phone: 320px
 $break-small: 1024px
 $break-large: 1280px
 
+/* Animation */
+
+@keyframes anim-contact
+  from
+    margin-bottom: -50px
+    opacity: 0
+  to
+    margin-bottom: 0
+    opacity: 1
+
+@keyframes anim-header
+  from
+    margin-top: -10%
+  to
+    margin-top: 0%
+
+@keyframes anim-introduction
+  from
+    opacity: 0
+  to
+    opacity: 1
 
 $open-transition: ease-in 0.5s
 $link-transition: 0.2s
@@ -30,6 +52,7 @@ $link-transition: 0.2s
   -webkit-box-shadow: 0 0 10px $color-shadow
   -moz-box-shadow: 0 0 10px $color-shadow
   box-shadow: 0 0 10px $color-shadow
+  transition: $link-transition
 
 =boxshadow-bottom($color-shadow)
   -webkit-box-shadow: 0 5px 15px $color-shadow
@@ -40,6 +63,7 @@ $link-transition: 0.2s
   background: linear-gradient($direction, $first, $second, $third, $forth)
   background: -webkit-linear-gradient($direction, $first, $second, $third, $forth)
   background: linear-gradient($direction, $first, $second, $third, $forth)
+  transition: $link-transition
 
 =under-link($color, $height, $width, $opacity)
   content: ""
@@ -86,6 +110,13 @@ a
 a:hover
   text-decoration: none
   transition: $link-transition
+
+html
+  scroll-behavior: smooth
+  .new-row
+    display: flex
+    flex-wrap: wrap
+
 body
   //+scrollbars($color1, $back1)
   background-color: $color1
@@ -97,16 +128,25 @@ body
     width: 100%
     top: 0
     background-color: $color1
+    animation-name: anim-header
+    animation-duration: 1s
     .font-style
       font-family: $second-font
       font-weight: $bold
 
     .col-left
       padding-left: 3rem
-      .link-btn
+      .link-btn a
         color: $back1
+        position: relative
+        margin: auto 0
+        padding: 0 1rem .15rem 1rem
+        border-radius: 10px
+      .link-btn a:hover:before
+        +under-link($back1, 2px, 75%, 1)
         .fas
           font-size: 25px
+
 
     .col-right
       margin: auto 0
@@ -135,18 +175,13 @@ body
       min-height: 100vh
       position: relative
       color: #FFFFFF
+      animation-name: anim-introduction
+      animation-duration: 1.5s
       .container-intro
         position: absolute
-        top: 25%
-        //left: 25%
-        @media screen and (max-width: 1023px)
-          position: absolute
-          top: 25%
-          left: 10%
-        @media screen and (min-width: 2560px)
-          position: absolute
-          top: 25%
-          left: 25%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
       .description-title
         margin-bottom: 2.5rem
         h2
@@ -188,12 +223,13 @@ body
           h6
             margin: auto 1rem
 
-    #educations
+    #about
       padding: 6rem
       background-color: #FFFFFF
-
       .container-timeline
         border-left: .2rem solid $color1
+        animation-name: anim-introduction
+        animation-duration: 1.5s
         h4
           margin: auto .5rem
         .fas
@@ -311,3 +347,34 @@ body
             background-color: $back1
             border-radius: 10px
             text-align: center
+          a:hover
+            +boxshadow-bottom($shadow2)
+          a:focus
+            +boxshadow-basic($shadow2)
+
+
+    #contact
+      +boxshadow-basic($shadow2)
+      padding: 2rem
+      .horizontal-border
+        background-color: $back1
+        height: 2px
+        width: 50%
+        margin: 0 auto
+      .col-contact
+        padding: 3rem
+      .col-contact a
+        position: relative
+        display: flex
+        justify-content: center
+        color: $white
+        padding: 1rem 0
+        .fas, .fab
+          font-size: 30px
+          margin-right: 1rem
+        h5
+          margin: auto 0
+      .col-contact a:hover:before
+        +under-link($white, 3px, 20%, 1)
+        animation-duration: .5s
+        animation-name: anim-contact
