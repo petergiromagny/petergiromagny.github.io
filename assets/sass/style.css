@@ -5,7 +5,7 @@
 /* Animation */
 @keyframes anim-contact {
   from {
-    margin-bottom: -50px;
+    margin-bottom: -25px;
     opacity: 0; }
   to {
     margin-bottom: 0;
@@ -14,11 +14,18 @@
   from {
     margin-top: -10%; }
   to {
-    margin-top: 0%; } }
+    margin-top: 0; } }
 @keyframes anim-introduction {
   from {
     opacity: 0; }
   to {
+    opacity: 1; } }
+@keyframes anim-link-head {
+  from {
+    width: 0;
+    opacity: 0; }
+  to {
+    width: 100%;
     opacity: 1; } }
 .shadow-header {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -71,8 +78,7 @@ body {
       body header .col-left .link-btn a {
         color: #EBF2FE;
         position: relative;
-        margin: auto 0;
-        padding: 0 1rem 0.15rem 1rem;
+        margin: 0 1rem 0.15rem 1rem;
         border-radius: 10px; }
       body header .col-left .link-btn a:hover:before {
         content: "";
@@ -82,10 +88,12 @@ body {
         margin: 0 auto;
         bottom: 0;
         height: 2px;
-        width: 75%;
+        width: inherit;
         background-color: #EBF2FE;
         opacity: 1;
-        transition: 0.2s; }
+        transition: 0.2s;
+        animation-name: anim-link-head;
+        animation-duration: 0.5s; }
         body header .col-left .link-btn a:hover:before .fas {
           font-size: 25px; }
     body header .col-right {
@@ -215,8 +223,25 @@ body {
             display: none; }
           body .body #about .container-timeline .timeline .modal-class {
             margin: 1rem 0 0 1rem; }
+            body .body #about .container-timeline .timeline .modal-class a {
+              position: relative;
+              padding-bottom: 0.2rem; }
+            body .body #about .container-timeline .timeline .modal-class a:hover {
+              color: #000000; }
+            body .body #about .container-timeline .timeline .modal-class a:hover i {
+              color: #0460D9; }
+            body .body #about .container-timeline .timeline .modal-class .fas {
+              font-size: 10px;
+              margin: 0; }
           body .body #about .container-timeline .timeline .title {
             margin: 0 1rem; }
+            body .body #about .container-timeline .timeline .title h5 {
+              font-weight: 600; }
+              body .body #about .container-timeline .timeline .title h5 span {
+                font-weight: 400;
+                font-size: 1rem; }
+            body .body #about .container-timeline .timeline .title h6 {
+              font-style: italic; }
         body .body #about .container-timeline .btn-position {
           margin: auto; }
           body .body #about .container-timeline .btn-position .btn-more {
@@ -241,21 +266,20 @@ body {
             color: #FFFFFF;
             transition: 0.2s; }
     body .body #skills {
-      padding-top: 3rem;
+      padding-top: 4rem;
       padding-bottom: 6rem; }
       body .body #skills img {
         width: 70px; }
-      body .body #skills .softskills-head h3 {
+      body .body #skills .skills-head h3 {
         text-align: center;
         color: #FFFFFF;
-        margin-bottom: 4rem; }
-      body .body #skills .softskills-left {
-        border-right: 2px solid #EBF2FE;
+        margin-bottom: 2.5rem;
+        font-weight: 600; }
+      body .body #skills .skills-left, body .body #skills .skills-right {
         display: flex;
         justify-content: space-around; }
-      body .body #skills .softskills-right {
-        display: flex;
-        justify-content: space-around; }
+      body .body #skills .skills-left {
+        border-right: 2px solid #EBF2FE; }
     body .body #portfolio {
       background-color: #FFFFFF;
       padding: 5rem 0; }
@@ -299,42 +323,51 @@ body {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
           transition: 0.2s; }
     body .body #contact {
+      position: relative;
+      min-height: 100vh;
       -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
       -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
       transition: 0.2s;
       padding: 2rem; }
-      body .body #contact .horizontal-border {
-        background-color: #EBF2FE;
-        height: 2px;
-        width: 50%;
-        margin: 0 auto; }
-      body .body #contact .col-contact {
+      body .body #contact .contact-head {
         padding: 3rem; }
-      body .body #contact .col-contact a {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        color: #FFFFFF;
-        padding: 1rem 0; }
-        body .body #contact .col-contact a .fas, body .body #contact .col-contact a .fab {
-          font-size: 30px;
-          margin-right: 1rem; }
-        body .body #contact .col-contact a h5 {
-          margin: auto 0; }
-      body .body #contact .col-contact a:hover:before {
-        content: "";
+        body .body #contact .contact-head h3 {
+          text-align: center;
+          color: #FFFFFF;
+          font-weight: 600; }
+      body .body #contact .contact-info {
         position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        bottom: 0;
-        height: 3px;
-        width: 20%;
-        background-color: #FFFFFF;
-        opacity: 1;
-        transition: 0.2s;
-        animation-duration: 0.5s;
-        animation-name: anim-contact; }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        body .body #contact .contact-info .col-contact {
+          padding: 3rem; }
+        body .body #contact .contact-info .col-contact a {
+          position: relative;
+          display: flex;
+          color: #FFFFFF;
+          padding: 1rem 0;
+          width: max-content;
+          margin: auto; }
+          body .body #contact .contact-info .col-contact a .fas, body .body #contact .contact-info .col-contact a .fab {
+            font-size: 30px;
+            margin-right: 1rem; }
+          body .body #contact .contact-info .col-contact a h5 {
+            margin: auto 0; }
+        body .body #contact .contact-info .col-contact a:hover:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          bottom: 0;
+          height: 3px;
+          width: 100%;
+          background-color: #FFFFFF;
+          opacity: 1;
+          transition: 0.2s;
+          animation-duration: 0.5s;
+          animation-name: anim-contact; }
 
 /*# sourceMappingURL=style.css.map */

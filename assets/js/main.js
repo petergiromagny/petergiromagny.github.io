@@ -42,6 +42,7 @@ close.onclick = function() {
 
 /*--------------Burger Menu--------------*/
 
+/*
 function scrollNav() {
     $('.nav a').click(function(){
         //Animate
@@ -52,4 +53,4 @@ function scrollNav() {
     });
     $('.scrollTop a').scrollTop();
 }
-scrollNav();
+scrollNav();*/

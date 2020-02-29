@@ -27,7 +27,7 @@ $break-large: 1280px
 
 @keyframes anim-contact
   from
-    margin-bottom: -50px
+    margin-bottom: -25px
     opacity: 0
   to
     margin-bottom: 0
@@ -37,12 +37,20 @@ $break-large: 1280px
   from
     margin-top: -10%
   to
-    margin-top: 0%
+    margin-top: 0
 
 @keyframes anim-introduction
   from
     opacity: 0
   to
+    opacity: 1
+
+@keyframes anim-link-head
+  from
+    width: 0
+    opacity: 0
+  to
+    width: 100%
     opacity: 1
 
 $open-transition: ease-in 0.5s
@@ -139,11 +147,13 @@ body
       .link-btn a
         color: $back1
         position: relative
-        margin: auto 0
-        padding: 0 1rem .15rem 1rem
+        //margin: auto 0
+        margin: 0 1rem .15rem 1rem
         border-radius: 10px
       .link-btn a:hover:before
-        +under-link($back1, 2px, 75%, 1)
+        +under-link($back1, 2px, inherit, 1)
+        animation-name: anim-link-head
+        animation-duration: .5s
         .fas
           font-size: 25px
 
@@ -272,8 +282,25 @@ body
             display: none
           .modal-class
             margin: 1rem 0 0 1rem
+            a
+              position: relative
+              padding-bottom: .2rem
+            a:hover
+              color: #000000
+            a:hover i
+              color: $color1
+            .fas
+              font-size: 10px
+              margin: 0
           .title
             margin: 0 1rem
+            h5
+              font-weight: $bold
+              span
+                font-weight: $regular
+                font-size: 1rem
+            h6
+              font-style: italic
         .btn-position
           margin: auto
           .btn-more
@@ -298,25 +325,23 @@ body
             color: #FFFFFF
             transition: $link-transition
 
+
     #skills
-      padding-top: 3rem
+      padding-top: 4rem
       padding-bottom: 6rem
       img
         width: 70px
-      .softskills-head
+      .skills-head
         h3
           text-align: center
           color: $white
-          margin-bottom: 4rem
-      .softskills-left
+          margin-bottom: 2.5rem
+          font-weight: $bold
+      .skills-left, .skills-right
+        display: flex
+        justify-content: space-around
+      .skills-left
         border-right: 2px solid $back1
-        display: flex
-        justify-content: space-around
-
-      .softskills-right
-        display: flex
-        justify-content: space-around
-
     #portfolio
       background-color: $white
       padding: 5rem 0
@@ -354,27 +379,36 @@ body
 
 
     #contact
+      position: relative
+      min-height: 100vh
       +boxshadow-basic($shadow2)
       padding: 2rem
-      .horizontal-border
-        background-color: $back1
-        height: 2px
-        width: 50%
-        margin: 0 auto
-      .col-contact
+      .contact-head
         padding: 3rem
-      .col-contact a
-        position: relative
-        display: flex
-        justify-content: center
-        color: $white
-        padding: 1rem 0
-        .fas, .fab
-          font-size: 30px
-          margin-right: 1rem
-        h5
-          margin: auto 0
-      .col-contact a:hover:before
-        +under-link($white, 3px, 20%, 1)
-        animation-duration: .5s
-        animation-name: anim-contact
+        h3
+          text-align: center
+          color: $white
+          font-weight: $bold
+      .contact-info
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        .col-contact
+          padding: 3rem
+        .col-contact a
+          position: relative
+          display: flex
+          color: $white
+          padding: 1rem 0
+          width: max-content
+          margin: auto
+          .fas, .fab
+            font-size: 30px
+            margin-right: 1rem
+          h5
+            margin: auto 0
+        .col-contact a:hover:before
+          +under-link($white, 3px, 100%, 1)
+          animation-duration: .5s
+          animation-name: anim-contact
