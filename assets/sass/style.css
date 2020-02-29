@@ -295,11 +295,12 @@ body {
           width: 100%;
           border-radius: 7px; }
       body .body #portfolio .box-project .box2 {
+        position: relative;
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         transition: 0.2s;
-        min-height: 355px;
+        min-height: 235px;
         padding: 1rem 2rem;
         margin: 0 auto;
         max-width: 350px;
@@ -308,8 +309,11 @@ body {
         body .body #portfolio .box-project .box2 .title {
           text-align: center; }
         body .body #portfolio .box-project .box2 a {
+          position: absolute;
+          bottom: 15px;
+          left: 15%;
           margin: 0 auto;
-          width: 100%;
+          width: 75%;
           background-color: #EBF2FE;
           border-radius: 10px;
           text-align: center; }
@@ -340,9 +344,10 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%);
+        padding-bottom: 3rem; }
         body .body #contact .contact-info .col-contact {
-          padding: 3rem; }
+          padding-top: 3rem; }
         body .body #contact .contact-info .col-contact a {
           position: relative;
           display: flex;

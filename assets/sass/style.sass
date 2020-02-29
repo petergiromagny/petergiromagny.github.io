@@ -357,8 +357,9 @@ body
               width: 100%
               border-radius: 7px
         .box2
+          position: relative
           +boxshadow-basic($shadow2)
-          min-height: 355px
+          min-height: 235px
           padding: 1rem 2rem
           margin: 0 auto
           max-width: 350px
@@ -367,8 +368,11 @@ body
           .title
             text-align: center
           a
+            position: absolute
+            bottom: 15px
+            left: 15%
             margin: 0 auto
-            width: 100%
+            width: 75%
             background-color: $back1
             border-radius: 10px
             text-align: center
@@ -395,7 +399,8 @@ body
         left: 50%
         transform: translate(-50%, -50%)
         .col-contact
-          padding: 3rem
+          padding-top: 3rem
+        padding-bottom: 3rem
         .col-contact a
           position: relative
           display: flex
