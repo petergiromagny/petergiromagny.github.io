@@ -308,10 +308,12 @@ body {
         border-bottom-right-radius: 10px; }
         body .body #portfolio .box-project .box2 .title {
           text-align: center; }
+        body .body #portfolio .box-project .box2 .text-middle {
+          margin-top: 1.4rem; }
         body .body #portfolio .box-project .box2 a {
           position: absolute;
           bottom: 15px;
-          left: 15%;
+          left: 12%;
           margin: 0 auto;
           width: 75%;
           background-color: #EBF2FE;
@@ -344,10 +346,11 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        padding-bottom: 3rem; }
+        width: 50%;
+        transform: translate(-50%, -50%); }
         body .body #contact .contact-info .col-contact {
-          padding-top: 3rem; }
+          padding-top: 5rem;
+          padding-bottom: 5rem; }
         body .body #contact .contact-info .col-contact a {
           position: relative;
           display: flex;
