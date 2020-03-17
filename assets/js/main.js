@@ -24,7 +24,7 @@ for (var i = 0; i < btns.length; i++) {
 /*--------------more information about me active--------------*/
 
 // Get the modal
-var modal = document.getElementById("modal-more");
+/*var modal = document.getElementById("modal-more");
 var btn = document.getElementById("btn-information");
 var close = document.getElementById("btn-close");
 
@@ -38,7 +38,7 @@ close.onclick = function() {
     modal.style.display = "none";
     close.style.display = "none";
     btn.style.display = "initial"
-};
+};*/
 
 /*--------------Burger Menu--------------*/
 

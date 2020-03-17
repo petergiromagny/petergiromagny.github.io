@@ -300,7 +300,7 @@ body {
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         transition: 0.2s;
-        min-height: 235px;
+        min-height: 265px;
         padding: 1rem 2rem;
         margin: 0 auto;
         max-width: 350px;
