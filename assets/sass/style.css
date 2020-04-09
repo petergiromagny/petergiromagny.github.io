@@ -59,6 +59,9 @@ html {
     display: flex;
     flex-wrap: wrap; }
 
+.no-scroll {
+  overflow: hidden; }
+
 body {
   background-color: #0460D9; }
   body header {
