@@ -328,6 +328,14 @@ body {
           -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
           transition: 0.2s; }
+    body .body #imgModal {
+      background: rgba(0, 0, 0, 0.4); }
+      body .body #imgModal .modal-content {
+        margin: auto;
+        width: 1000px;
+        height: 571px; }
+        body .body #imgModal .modal-content img {
+          height: 100%; }
     body .body #contact {
       position: relative;
       min-height: 100vh;
