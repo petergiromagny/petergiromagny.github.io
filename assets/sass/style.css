@@ -340,15 +340,14 @@ body {
       body .body #imgModal .modal-content {
         animation-name: anim-introduction;
         animation-duration: 0.5s;
-        margin: 7rem auto auto auto;
-        width: 1000px;
-        height: 571px;
+        margin: 4rem auto auto auto;
+        width: 1300px;
         border: none;
         background: none; }
         body .body #imgModal .modal-content img {
           position: relative;
           border-radius: 5px;
-          height: 100%; }
+          width: 100%; }
         body .body #imgModal .modal-content .btn-close {
           position: absolute;
           right: 3%;
@@ -368,23 +367,20 @@ body {
           transition: 0.4s; }
         body .body #imgModal .modal-content .previous-slide {
           position: absolute;
-          left: 1%;
-          top: 50%;
-          transform: translate(0, -35%); }
+          left: 0;
+          top: 50%; }
         body .body #imgModal .modal-content .next-slide {
           position: absolute;
-          right: 1%;
-          top: 50%;
-          transform: translate(0%, -35%); }
+          right: 0;
+          top: 50%; }
         body .body #imgModal .modal-content .btn-slide {
-          padding: 0.5rem 1rem;
-          border-radius: 50%;
+          padding: 10rem 1.5rem;
+          border-radius: 0.5px;
           color: #0460D9;
           transition: 0.4s; }
         body .body #imgModal .modal-content .btn-slide:hover {
-          background-color: #0460D9;
-          opacity: 0.75;
-          color: #FFFFFF;
+          font-size: 20px;
+          cursor: pointer;
           transition: 0.4s; }
     body .body #contact {
       position: relative;

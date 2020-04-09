@@ -64,3 +64,33 @@ window.onclick = function(event) {
 		modal.style.display = "none";
 	}
 };
+
+/*
+* Slider inside popup
+*/
+let imgUrl = [
+                'assets\\img\\feu\\Home1.PNG',
+                'assets\\img\\feu\\Login.PNG',
+                'assets\\img\\feu\\Product.PNG',
+                'assets\\img\\feu\\Product2.PNG',
+                'assets\\img\\feu\\Signin.PNG'
+            ],
+    imgAlt = [
+                 'home page',
+                 'login page',
+                 'product page 1',
+                 'product page 2',
+                 'sign in page'
+             ],
+    imgTag = document.getElementById('imgSlide'),
+    numero = 0;
+
+function ChangeSlide(sens) {
+    numero = numero + sens;
+    if (numero < 0)
+        numero = imgUrl.length - 1;
+    if (numero > imgUrl.length - 1)
+        numero = 0;
+    imgTag.src = imgUrl[numero];
+    imgTag.alt = imgAlt[numero];
+}

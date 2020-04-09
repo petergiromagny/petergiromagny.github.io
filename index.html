@@ -250,15 +250,17 @@
 
 	<div id="imgModal" class="modal">
 		<div class="modal-content">
-			<img src="assets/img/feu/Home1.PNG" alt="homeFeu">
-            <div class="next-slide">
-                <a href="" class="btn-slide">
-                    <i class="fas fa-caret-right ml-1"></i>
+            <div class="img-content">
+                <img src="assets/img/feu/Home1.PNG" alt="homeFeu" id="imgSlide">
+            </div>
+            <div class="next-slide" onclick="ChangeSlide(1)">
+                <a id="nextImg" class="btn-slide">
+                    <i class="fas fa-chevron-right"></i>
                 </a>
             </div>
-            <div class="previous-slide">
-                <a href="" class="btn-slide">
-                    <i class="fas fa-caret-left mr-1"></i>
+            <div class="previous-slide" onclick="ChangeSlide(-1)">
+                <a id="previousImg" class="btn-slide">
+                    <i class="fas fa-chevron-left"></i>
                 </a>
             </div>
 			<span class="close btn-close">
