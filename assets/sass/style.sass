@@ -241,7 +241,7 @@ body
       .container-timeline
         border-left: .2rem solid $color1
         animation-name: anim-introduction
-        animation-duration: 1.5s
+        animation-duration: .5s
         h4
           margin: auto .5rem
         .fas
@@ -331,6 +331,8 @@ body
     #skills
       padding-top: 4rem
       padding-bottom: 6rem
+      animation-name: anim-introduction
+      animation-duration: .5s
       img
         width: 70px
       .skills-head
@@ -347,6 +349,8 @@ body
     #portfolio
       background-color: $white
       padding: 5rem 0
+      animation-name: anim-introduction
+      animation-duration: .5s
       .box-project
         //margin: 0 .5rem
         .box1
@@ -388,15 +392,60 @@ body
     #imgModal
       background: rgba(0, 0, 0, 0.4)
       .modal-content
-        margin: auto
+        animation-name: anim-introduction
+        animation-duration: .5s
+        margin: 7rem auto auto auto
         width: 1000px
         height: 571px
+        border: none
+        background: none
         img
+          position: relative
+          border-radius: 5px
           height: 100%
+        .btn-close
+          position: absolute
+          right: 3%
+          top: 0
+          padding: .2rem .5rem
+          margin-top: 1rem
+          border-radius: 4px
+          text-align: center
+          cursor: pointer
+          color: $color1
+          font-size: 15px
+          opacity: 1
+          text-shadow: none
+          transition: .4s
+        .btn-close:hover
+          background: #FFFFFF
+          transition: .4s
+        .previous-slide
+          position: absolute
+          left: 1%
+          top: 50%
+          transform: translate(0, -35%)
+        .next-slide
+          position: absolute
+          right: 1%
+          top: 50%
+          transform: translate(0%, -35%)
+        .btn-slide
+          padding: .5rem 1rem
+          border-radius: 50%
+          color: $color1
+          transition: .4s
+        .btn-slide:hover
+          background-color: $color1
+          opacity: .75
+          color: #FFFFFF
+          transition: .4s
 
     #contact
       position: relative
       min-height: 100vh
+      animation-name: anim-introduction
+      animation-duration: .5s
       +boxshadow-basic($shadow2)
       padding: 2rem
       .contact-head
