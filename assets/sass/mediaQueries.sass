@@ -1,9 +1,9 @@
 
-//$xs : 568px
-//$sm : 768px
-//$md : 1024px
-//$lg : 1440px
-//$xl : 2560px
+$xs : 568px
+$sm : 768px
+$md : 1024px
+$lg : 1440px
+$xl : 2560px
 
 =media-min($break-point)
   @media screen and (min-width: $break-point)
@@ -14,15 +14,18 @@
     @content
 
 =responsive($breakpoint)
+  @if $breakpoint == xs
+    @media (max-width: $xs)
+      @content
   @if $breakpoint == sm
-    @media (max-width: 600px)
+    @media (max-width: $sm)
       @content
   @if $breakpoint == md
-    @media (max-width: 900px)
+    @media (max-width: $md)
       @content
   @if $breakpoint == lg
-    @media (max-width: 1400px)
+    @media (max-width: $lg)
       @content
   @if $breakpoint == xl
-    @media (min-width: 1800px)
+    @media (min-width: $xl)
       @content
