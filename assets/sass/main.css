@@ -392,10 +392,9 @@ body {
       min-height: 100vh;
       animation-name: anim-introduction;
       animation-duration: 0.5s;
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      transition: 0.2s;
+      -webkit-box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 -12px 15px rgba(0, 0, 0, 0.15);
       padding: 2rem; }
       body .body #contact .contact-head {
         padding: 3rem; }
@@ -407,7 +406,7 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 50%;
+        width: 100%;
         transform: translate(-50%, -50%); }
         body .body #contact .contact-info .col-contact {
           padding-top: 5rem;

@@ -62,6 +62,11 @@ $link-transition: 0.2s
   -moz-box-shadow: 0 5px 15px $color-shadow
   box-shadow: 0 5px 15px $color-shadow
 
+=boxshadow-top($color-shadow)
+  -webkit-box-shadow: 0 -12px 15px $color-shadow
+  -moz-box-shadow: 0 -12px 15px $color-shadow
+  box-shadow: 0 -12px 15px $color-shadow
+
 =linear-gradient($direction, $first, $second, $third, $forth)
   background: linear-gradient($direction, $first, $second, $third, $forth)
   background: -webkit-linear-gradient($direction, $first, $second, $third, $forth)
@@ -440,7 +445,7 @@ body
       min-height: 100vh
       animation-name: anim-introduction
       animation-duration: .5s
-      +boxshadow-basic($shadow2)
+      +boxshadow-top($shadow2)
       padding: 2rem
       .contact-head
         padding: 3rem
@@ -452,7 +457,7 @@ body
         position: absolute
         top: 50%
         left: 50%
-        width: 50%
+        width: 100%
         transform: translate(-50%, -50%)
         .col-contact
           padding-top: 5rem
