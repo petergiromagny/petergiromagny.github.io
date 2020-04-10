@@ -27,6 +27,7 @@
   to {
     width: 100%;
     opacity: 1; } }
+/* Mixins */
 .shadow-header {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -172,6 +173,12 @@ body {
           color: #FFFFFF; }
           body .body #introduction .container-scroll a h6 {
             margin: auto 1rem; }
+      @media (min-width: 768px) {
+        body .body #introduction .description {
+          text-align: center; } }
+      @media (min-width: 1024px) {
+        body .body #introduction .description {
+          text-align: justify; } }
     body .body #about {
       padding: 6rem;
       background-color: #FFFFFF; }

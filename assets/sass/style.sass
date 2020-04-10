@@ -19,12 +19,12 @@ $shadow2: rgba(0, 0, 0, 0.15)
 $shadow3: rgba(0, 0, 0, 0.05)
 
 /* Screen size */
-$break-phone: 320px
-$break-small: 1024px
-$break-large: 1280px
+$break-phone  : 320px
+$break-tablet : 768px
+$break-small  : 1024px
+$break-large  : 1280px
 
 /* Animation */
-
 @keyframes anim-contact
   from
     margin-bottom: -25px
@@ -56,6 +56,7 @@ $break-large: 1280px
 $open-transition: ease-in 0.5s
 $link-transition: 0.2s
 
+/* Mixins */
 =boxshadow-basic($color-shadow)
   -webkit-box-shadow: 0 0 10px $color-shadow
   -moz-box-shadow: 0 0 10px $color-shadow
@@ -102,6 +103,25 @@ $link-transition: 0.2s
     scrollbar-face-color: $foreground-color
     scrollbar-track-color: $background-color
 
+=xs()
+  @media (min-width: 320px)
+    @content
+
+=sm()
+  @media (min-width: 768px)
+    @content
+
+=md()
+  @media (min-width: 1024px)
+    @content
+
+=lg()
+  @media (min-width: 1440px)
+    @content
+
+=xl()
+  @media (min-width: 2560px)
+    @content
 
 .shadow-header
   +boxshadow-basic($shadow2)
@@ -225,6 +245,7 @@ body
             margin-top: 1rem
             margin-bottom: 0
 
+
       .container-scroll
         position: absolute
         bottom: 5%
@@ -234,6 +255,12 @@ body
           color: $white
           h6
             margin: auto 1rem
+      +sm
+        .description
+          text-align: center
+      +md
+        .description
+          text-align: justify
 
     #about
       padding: 6rem
