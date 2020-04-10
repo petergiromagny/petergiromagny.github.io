@@ -155,7 +155,9 @@ body {
           border-radius: 50%;
           background-color: #EBF2FE; }
       body .body #introduction .description {
-        margin-top: 1.5rem; }
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        text-align: justify; }
         body .body #introduction .description blockquote {
           font-style: italic;
           background-color: #EBF2FE;
@@ -173,12 +175,6 @@ body {
           color: #FFFFFF; }
           body .body #introduction .container-scroll a h6 {
             margin: auto 1rem; }
-      @media (min-width: 768px) {
-        body .body #introduction .description {
-          text-align: center; } }
-      @media (min-width: 1024px) {
-        body .body #introduction .description {
-          text-align: justify; } }
     body .body #about {
       padding: 6rem;
       background-color: #FFFFFF; }

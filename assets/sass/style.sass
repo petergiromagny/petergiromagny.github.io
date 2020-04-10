@@ -19,10 +19,11 @@ $shadow2: rgba(0, 0, 0, 0.15)
 $shadow3: rgba(0, 0, 0, 0.05)
 
 /* Screen size */
-$break-phone  : 320px
-$break-tablet : 768px
-$break-small  : 1024px
-$break-large  : 1280px
+$xs : 568px
+$sm : 768px
+$md : 1024px
+$lg : 1440px
+$xl : 2560px
 
 /* Animation */
 @keyframes anim-contact
@@ -103,24 +104,12 @@ $link-transition: 0.2s
     scrollbar-face-color: $foreground-color
     scrollbar-track-color: $background-color
 
-=xs()
-  @media (min-width: 320px)
+=media-min($break-point)
+  @media screen and (min-width: $break-point)
     @content
 
-=sm()
-  @media (min-width: 768px)
-    @content
-
-=md()
-  @media (min-width: 1024px)
-    @content
-
-=lg()
-  @media (min-width: 1440px)
-    @content
-
-=xl()
-  @media (min-width: 2560px)
+=media-max($break-point)
+  @media screen and (max-width: $break-point - 1)
     @content
 
 .shadow-header
@@ -236,6 +225,8 @@ body
 
       .description
         margin-top: 1.5rem
+        font-size: 1rem
+        text-align: justify
         blockquote
           font-style: italic
           background-color: $back1
@@ -244,7 +235,6 @@ body
           p
             margin-top: 1rem
             margin-bottom: 0
-
 
       .container-scroll
         position: absolute
@@ -255,12 +245,6 @@ body
           color: $white
           h6
             margin: auto 1rem
-      +sm
-        .description
-          text-align: center
-      +md
-        .description
-          text-align: justify
 
     #about
       padding: 6rem
