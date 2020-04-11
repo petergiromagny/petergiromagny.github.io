@@ -282,7 +282,7 @@ body {
         width: 70px; }
         @media (max-width: 768px) {
           body .body #skills img {
-            width: 40px; } }
+            width: 40px !important; } }
       body .body #skills .skills-head h3 {
         text-align: center;
         color: #FFFFFF;
