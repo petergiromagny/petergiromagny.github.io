@@ -280,6 +280,9 @@ body {
       animation-duration: 0.5s; }
       body .body #skills img {
         width: 70px; }
+        @media (max-width: 768px) {
+          body .body #skills img {
+            width: 40px; } }
       body .body #skills .skills-head h3 {
         text-align: center;
         color: #FFFFFF;
