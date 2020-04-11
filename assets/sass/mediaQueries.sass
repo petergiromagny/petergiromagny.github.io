@@ -15,17 +15,17 @@ $xl : 2560px
 
 =responsive($breakpoint)
   @if $breakpoint == xs
-    @media (max-width: $xs)
+    @media screen and (max-width: $xs)
       @content
   @if $breakpoint == sm
-    @media (max-width: $sm)
+    @media screen and (max-width: $sm)
       @content
   @if $breakpoint == md
-    @media (max-width: $md)
+    @media screen and (max-width: $md)
       @content
   @if $breakpoint == lg
-    @media (max-width: $lg)
+    @media screen and (max-width: $lg)
       @content
   @if $breakpoint == xl
-    @media (min-width: $xl)
+    @media screen and (min-width: $xl)
       @content
