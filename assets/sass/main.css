@@ -290,6 +290,10 @@ body {
         justify-content: space-around; }
       body .body #skills .skills-left {
         border-right: 2px solid #EBF2FE; }
+        @media (max-width: 768px) {
+          body .body #skills .skills-left {
+            margin-bottom: 5rem;
+            border-right: none !important; } }
     body .body #portfolio {
       background-color: #FFFFFF;
       padding: 5rem 0;
