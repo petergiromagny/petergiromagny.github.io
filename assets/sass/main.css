@@ -295,6 +295,12 @@ body {
       padding: 5rem 0;
       animation-name: anim-introduction;
       animation-duration: 0.5s; }
+      @media (max-width: 1024px) {
+        body .body #portfolio .margin-md {
+          margin-bottom: 3rem; } }
+      @media (max-width: 768px) {
+        body .body #portfolio .margin-sm {
+          margin-bottom: 3rem !important; } }
       body .body #portfolio .box-project .box1 .img-head {
         max-width: 370px;
         margin: 0 auto;
@@ -303,6 +309,9 @@ body {
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         transition: 0.2s; }
+        @media (min-width: 2560px) {
+          body .body #portfolio .box-project .box1 .img-head {
+            max-width: 540px; } }
         body .body #portfolio .box-project .box1 .img-head img {
           width: 100%;
           border-radius: 7px; }
@@ -312,16 +321,48 @@ body {
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
         transition: 0.2s;
-        min-height: 265px;
+        min-height: 310px;
+        max-width: 350px;
         padding: 1rem 2rem;
         margin: 0 auto;
-        max-width: 350px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px; }
+        @media (max-width: 1024px) {
+          body .body #portfolio .box-project .box2 {
+            min-height: 275px; } }
+        @media (min-width: 2560px) {
+          body .body #portfolio .box-project .box2 {
+            min-width: 500px;
+            min-height: 245px; } }
         body .body #portfolio .box-project .box2 .title {
           text-align: center; }
-        body .body #portfolio .box-project .box2 .text-middle {
-          margin-top: 1.4rem; }
+        @media (max-width: 1024px) {
+          body .body #portfolio .box-project .box2 .text-middle-1 {
+            margin-top: 1.3rem; } }
+        @media (min-width: 2560px) {
+          body .body #portfolio .box-project .box2 .text-middle-1 {
+            margin-top: 1.4rem; } }
+        @media (max-width: 1024px) {
+          body .body #portfolio .box-project .box2 .text-middle-2 {
+            margin-top: 1.3rem !important; } }
+        @media (max-width: 1440px) {
+          body .body #portfolio .box-project .box2 .text-middle-2 {
+            margin-top: 2rem; } }
+        @media (min-width: 2560px) {
+          body .body #portfolio .box-project .box2 .text-middle-2 {
+            margin-top: 1.4rem; } }
+        @media (max-width: 1440px) {
+          body .body #portfolio .box-project .box2 .text-middle-3 {
+            margin-top: 2.2rem; } }
+        @media (min-width: 2560px) {
+          body .body #portfolio .box-project .box2 .text-middle-3 {
+            margin-top: 1.4rem; } }
+        @media (max-width: 1440px) {
+          body .body #portfolio .box-project .box2 .text-middle-4 {
+            margin-top: 2rem; } }
+        @media (min-width: 2560px) {
+          body .body #portfolio .box-project .box2 .text-middle-4 {
+            margin-top: 1.4rem; } }
         body .body #portfolio .box-project .box2 a {
           position: absolute;
           bottom: 15px;
