@@ -359,9 +359,6 @@ body
       +responsive(md)
         .margin-md
           margin-bottom: 3rem
-      +responsive(sm)
-        .margin-sm
-          margin-bottom: 3rem !important
       .box-project
         .box1
           .img-head
@@ -377,7 +374,7 @@ body
         .box2
           position: relative
           +boxshadow-basic($shadow2)
-          min-height: 310px
+          min-height: 250px
           max-width: 350px
           padding: 1rem 2rem
           margin: 0 auto
@@ -385,6 +382,8 @@ body
           border-bottom-right-radius: 10px
           +responsive(md)
             min-height: 275px
+          +responsive(lg)
+            min-height: 300px
           +responsive(xl)
             min-width: 500px
             min-height: 245px
@@ -438,6 +437,9 @@ body
         width: 1300px
         border: none
         background: none
+        +responsive(md)
+          margin: 3rem auto auto auto !important
+          width: 900px !important
         +responsive(lg)
           margin: 2rem auto auto auto
           width: 1100px
@@ -459,9 +461,9 @@ body
           opacity: 1
           text-shadow: none
           transition: .4s
-        .btn-close:hover
-          background: #FFFFFF
-          transition: .4s
+          &:hover
+            background: #FFFFFF
+            transition: .4s
         .previous-slide
           position: absolute
           left: 0
@@ -475,10 +477,8 @@ body
           border-radius: .5px
           color: $color1
           transition: .4s
-        .btn-slide:hover
-          font-size: 20px
-          cursor: pointer
-          transition: .4s
+          &:hover
+            cursor: pointer
 
 
     #contact
