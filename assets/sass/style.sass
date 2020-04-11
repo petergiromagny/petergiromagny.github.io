@@ -366,6 +366,8 @@ body
             margin: 0 auto
             border-radius: 7px
             +boxshadow-basic($shadow)
+            +responsive(xs)
+              max-width: 800px
             +responsive(xl)
               max-width: 540px
             img
@@ -380,6 +382,8 @@ body
           margin: 0 auto
           border-bottom-left-radius: 10px
           border-bottom-right-radius: 10px
+          +responsive(xs)
+            max-width: 720px
           +responsive(md)
             min-height: 275px
           +responsive(lg)
@@ -389,6 +393,12 @@ body
             min-height: 245px
           .title
             text-align: center
+            +responsive(xs)
+              h4
+                font-size: 2.5rem !important
+          p
+            +responsive(xs)
+              font-size: 1.3rem
           .text-middle-1
             +responsive(md)
               margin-top: 1.3rem
@@ -423,10 +433,20 @@ body
             background-color: $back1
             border-radius: 10px
             text-align: center
+            +responsive(xs)
+              font-size: 1.3rem
           a:hover
             +boxshadow-bottom($shadow2)
           a:focus
             +boxshadow-basic($shadow2)
+          .btn-mobile
+            display: none
+            +responsive(xs)
+              display: initial
+          .btn-desktop
+            display: initial
+            +responsive(xs)
+              display: none
 
     #imgModal
       background: rgba(0, 0, 0, 0.4)
