@@ -200,10 +200,12 @@ body
           font-size: 3rem
           text-align: center
           +responsive(sm)
-            font-size: 6rem
+            font-size: 6rem !important
         h3
           font-size: 1.5rem
           text-align: center
+          +responsive(sm)
+            font-size: 2.8rem !important
 
       #container-img
         .circle-img
@@ -214,11 +216,15 @@ body
             border: 6px solid $back1
             border-radius: 50%
             background-color: $back1
+            +responsive(sm)
+              width: 650px
 
       .description
         margin-top: 1.5rem
         font-size: 1rem
         text-align: justify
+        +responsive(sm)
+          font-size: 2rem !important
         blockquote
           font-style: italic
           background-color: $back1
@@ -341,6 +347,7 @@ body
         width: 70px
         +responsive(sm)
           width: 40px !important
+          height: 40px !important
       .skills-head
         h3
           text-align: center
