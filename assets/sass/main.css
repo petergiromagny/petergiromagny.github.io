@@ -142,15 +142,9 @@ body {
           font-family: Roboto Slab, serif;
           font-size: 3rem;
           text-align: center; }
-          @media screen and (max-width: 768px) {
-            body .body #introduction .description-title h2 {
-              font-size: 6rem !important; } }
         body .body #introduction .description-title h3 {
           font-size: 1.5rem;
           text-align: center; }
-          @media screen and (max-width: 768px) {
-            body .body #introduction .description-title h3 {
-              font-size: 2.8rem !important; } }
       body .body #introduction #container-img .circle-img {
         display: grid;
         justify-content: center; }
@@ -159,16 +153,10 @@ body {
           border: 6px solid #EBF2FE;
           border-radius: 50%;
           background-color: #EBF2FE; }
-          @media screen and (max-width: 768px) {
-            body .body #introduction #container-img .circle-img img {
-              width: 650px; } }
       body .body #introduction .description {
         margin-top: 1.5rem;
         font-size: 1rem;
         text-align: justify; }
-        @media screen and (max-width: 768px) {
-          body .body #introduction .description {
-            font-size: 2rem !important; } }
         body .body #introduction .description blockquote {
           font-style: italic;
           background-color: #EBF2FE;
