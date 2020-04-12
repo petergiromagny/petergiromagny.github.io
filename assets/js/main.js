@@ -94,3 +94,10 @@ function ChangeSlide(sens) {
     imgTag.src = imgUrl[numero];
     imgTag.alt = imgAlt[numero];
 }
+
+$('.js-toggle-menu').click(function(e){
+    e.preventDefault();
+    $('.mobile-header-nav').slideToggle();
+    $('.menu-item').toggleClass('open');
+});
+

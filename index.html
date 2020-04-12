@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/FontAwesome/css/all.css">
-    <link rel="stylesheet" href="assets/css/queries.css">
     <link rel="stylesheet" href="assets/sass/main.css">
     <link rel="icon" href="assets/img/PG.ico">
     <title>Peter GIROMAGNY</title>
@@ -13,21 +12,50 @@
 <body>
 
 <header id="top-page">
-    <div class="new-row">
-        <div class="col-md-6 col-left">
-            <div class="new-row link-btn">
-                <a href="#introduction">My name is Peter</a>
-                <a href="#about">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#portfolio">Portfolio</a>
+    <div class="menu-desktop">
+        <div class="new-row">
+            <div class="col-md-6 col-left">
+                <div class="new-row link-btn">
+                    <a href="#introduction">My name is Peter</a>
+                    <a href="#about">About me</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#portfolio">Portfolio</a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6 col-right">
-            <div class="btn-contact">
-                <a href="#contact" class="btn-contact_a">Contact me</a>
+            <div class="col-md-6 col-right">
+                <div class="btn-contact">
+                    <a href="#contact" class="btn-contact_a">Contact me</a>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="menu-mobile">
+        <div class="new-row">
+            <div class="col-6 col-left">
+                <div class="mobile-menu-toggle js-toggle-menu">
+                    <span class="menu-item"></span>
+                    <span class="menu-item"></span>
+                    <span class="menu-item"></span>
+                </div>
+            </div>
+            <div class="col-6 col-right">
+                <div class="contact-mobile">
+                    <a href="#contact" class="btn-contact_a">Contact me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-nav-wrap" role="navigation" aria-label="Mobie navigation">
+        <ul class="mobile-header-nav shadow-bottom">
+            <li><a href="#introduction">My name is Peter</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+    </div>
+
 </header>
 
 <div class="body">
