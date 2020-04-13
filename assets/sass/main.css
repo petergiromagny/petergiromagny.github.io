@@ -623,28 +623,31 @@ body {
           text-align: center;
           color: #FFFFFF;
           font-weight: 600; }
-      body .body #contact .contact-info {
+      @media screen and (max-width: 568px) {
+        body .body #contact .contact-desktop {
+          display: none; } }
+      body .body #contact .contact-desktop .contact-info {
         position: absolute;
         top: 50%;
         left: 50%;
         width: 100%;
         transform: translate(-50%, -50%); }
-        body .body #contact .contact-info .col-contact {
+        body .body #contact .contact-desktop .contact-info .col-contact {
           padding-top: 5rem;
           padding-bottom: 5rem; }
-        body .body #contact .contact-info .col-contact a {
+        body .body #contact .contact-desktop .contact-info .col-contact a {
           position: relative;
           display: flex;
           color: #FFFFFF;
           padding: 1rem 0;
           width: max-content;
           margin: auto; }
-          body .body #contact .contact-info .col-contact a .fas, body .body #contact .contact-info .col-contact a .fab {
+          body .body #contact .contact-desktop .contact-info .col-contact a .fas, body .body #contact .contact-desktop .contact-info .col-contact a .fab {
             font-size: 30px;
             margin-right: 1rem; }
-          body .body #contact .contact-info .col-contact a h5 {
+          body .body #contact .contact-desktop .contact-info .col-contact a h5 {
             margin: auto 0; }
-        body .body #contact .contact-info .col-contact a:hover:before {
+        body .body #contact .contact-desktop .contact-info .col-contact a:hover:before {
           content: "";
           position: absolute;
           left: 0;
@@ -658,5 +661,24 @@ body {
           transition: 0.2s;
           animation-duration: 0.5s;
           animation-name: anim-contact; }
+      body .body #contact .contact-mobile {
+        display: none; }
+        @media screen and (max-width: 568px) {
+          body .body #contact .contact-mobile {
+            display: initial; }
+            body .body #contact .contact-mobile .col-contact {
+              padding: 0.5rem 0; }
+            body .body #contact .contact-mobile .col-contact a {
+              position: relative;
+              display: flex;
+              color: #FFFFFF;
+              padding: 1rem 0;
+              width: max-content;
+              margin: auto; }
+              body .body #contact .contact-mobile .col-contact a .fas, body .body #contact .contact-mobile .col-contact a .fab {
+                font-size: 30px;
+                margin-right: 1rem; }
+              body .body #contact .contact-mobile .col-contact a h5 {
+                margin: auto 0; } }
 
 /*# sourceMappingURL=main.css.map */
