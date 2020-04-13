@@ -431,25 +431,49 @@ body
       padding-bottom: 6rem
       animation-name: anim-introduction
       animation-duration: .5s
-      img
-        width: 70px
-        +responsive(sm)
-          width: 40px !important
-          height: 40px !important
       .skills-head
         h3
           text-align: center
           color: $white
           margin-bottom: 2.5rem
           font-weight: $bold
-      .skills-left, .skills-right
-        display: flex
-        justify-content: space-around
-      .skills-left
-        border-right: 2px solid $back1
-        +responsive(sm)
-          margin-bottom: 5rem
-          border-right: none !important
+      .skills-desktop
+        +responsive(xs)
+          display: none
+        .skills-left, .skills-right
+          display: flex
+          justify-content: space-around
+          img
+            width: 70px
+            +responsive(sm)
+              width: 80px
+        .skills-left
+          border-right: 2px solid $back1
+          +responsive(sm)
+            border-right: none
+        hr
+          display: none
+          +responsive(sm)
+            display: initial
+            width: 75%
+            margin: 2rem auto
+            background-color: $back1
+      .skills-mobile
+        display: none
+        +responsive(xs)
+          display: initial
+        .languages, .software
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-around
+          img
+            width: 80px
+            margin: auto 4%
+            padding: 10px 0 10px 0
+        hr
+          width: 75%
+          margin: 1.5rem auto
+          border-color: $back1
 
 
     #portfolio

@@ -376,26 +376,52 @@ body {
       padding-bottom: 6rem;
       animation-name: anim-introduction;
       animation-duration: 0.5s; }
-      body .body #skills img {
-        width: 70px; }
-        @media screen and (max-width: 768px) {
-          body .body #skills img {
-            width: 40px !important;
-            height: 40px !important; } }
       body .body #skills .skills-head h3 {
         text-align: center;
         color: #FFFFFF;
         margin-bottom: 2.5rem;
         font-weight: 600; }
-      body .body #skills .skills-left, body .body #skills .skills-right {
+      @media screen and (max-width: 568px) {
+        body .body #skills .skills-desktop {
+          display: none; } }
+      body .body #skills .skills-desktop .skills-left, body .body #skills .skills-desktop .skills-right {
         display: flex;
         justify-content: space-around; }
-      body .body #skills .skills-left {
+        body .body #skills .skills-desktop .skills-left img, body .body #skills .skills-desktop .skills-right img {
+          width: 70px; }
+          @media screen and (max-width: 768px) {
+            body .body #skills .skills-desktop .skills-left img, body .body #skills .skills-desktop .skills-right img {
+              width: 80px; } }
+      body .body #skills .skills-desktop .skills-left {
         border-right: 2px solid #EBF2FE; }
         @media screen and (max-width: 768px) {
-          body .body #skills .skills-left {
-            margin-bottom: 5rem;
-            border-right: none !important; } }
+          body .body #skills .skills-desktop .skills-left {
+            border-right: none; } }
+      body .body #skills .skills-desktop hr {
+        display: none; }
+        @media screen and (max-width: 768px) {
+          body .body #skills .skills-desktop hr {
+            display: initial;
+            width: 75%;
+            margin: 2rem auto;
+            background-color: #EBF2FE; } }
+      body .body #skills .skills-mobile {
+        display: none; }
+        @media screen and (max-width: 568px) {
+          body .body #skills .skills-mobile {
+            display: initial; } }
+        body .body #skills .skills-mobile .languages, body .body #skills .skills-mobile .software {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; }
+          body .body #skills .skills-mobile .languages img, body .body #skills .skills-mobile .software img {
+            width: 80px;
+            margin: auto 4%;
+            padding: 10px 0 10px 0; }
+        body .body #skills .skills-mobile hr {
+          width: 75%;
+          margin: 1.5rem auto;
+          border-color: #EBF2FE; }
     body .body #portfolio {
       background-color: #FFFFFF;
       padding: 5rem 0;
