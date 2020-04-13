@@ -95,6 +95,9 @@ function ChangeSlide(sens) {
     imgTag.alt = imgAlt[numero];
 }
 
+/*
+* Menu hamburger mobile and tablet
+*/
 $('.js-toggle-menu').click(function(e){
     e.preventDefault();
     $('.mobile-header-nav').slideToggle();
