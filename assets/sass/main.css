@@ -82,7 +82,8 @@ body {
       font-family: Montserra, sans-serif;
       font-weight: 600; }
     body header .menu-desktop .col-left {
-      padding-left: 3rem; }
+      padding-left: 3rem;
+      padding-right: 0; }
       body header .menu-desktop .col-left .link-btn a {
         color: #EBF2FE;
         position: relative;
@@ -107,7 +108,8 @@ body {
     body header .menu-desktop .col-right {
       margin: auto 0;
       text-align: right;
-      padding-right: 3rem; }
+      padding-right: 3rem;
+      padding-left: 0; }
       body header .menu-desktop .col-right .btn-contact_a {
         color: #EBF2FE;
         border: 1.5px solid #EBF2FE;
