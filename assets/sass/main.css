@@ -75,7 +75,7 @@ body {
     background-color: #0460D9;
     animation-name: anim-header;
     animation-duration: 1s; }
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
       body header .menu-desktop {
         display: none; } }
     body header .menu-desktop .font-style {
@@ -131,7 +131,7 @@ body {
         transition: 0.2s; }
   body header .menu-mobile {
     display: none; }
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
       body header .menu-mobile {
         display: initial;
         position: fixed;
@@ -177,7 +177,7 @@ body {
     left: 50%;
     transform: translate(-50%);
     width: 100%; }
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
       body header .mobile-nav-wrap {
         display: initial; }
         body header .mobile-nav-wrap .mobile-header-nav {
@@ -207,12 +207,12 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #introduction .container-intro {
             padding-top: 3.8rem; } }
       body .body #introduction .description-title {
         margin-bottom: 2.5rem; }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #introduction .description-title {
             margin-bottom: 1rem;
             margin-top: 1rem; } }
@@ -220,13 +220,13 @@ body {
           font-family: Roboto Slab, serif;
           font-size: 3rem;
           text-align: center; }
-          @media screen and (max-width: 568px) {
+          @media only screen and (max-width: 568px) {
             body .body #introduction .description-title h2 {
               font-size: 2rem; } }
         body .body #introduction .description-title h3 {
           font-size: 1.5rem;
           text-align: center; }
-          @media screen and (max-width: 568px) {
+          @media only screen and (max-width: 568px) {
             body .body #introduction .description-title h3 {
               font-size: 1.3rem; } }
       body .body #introduction #container-img .circle-img {
@@ -237,14 +237,14 @@ body {
           border: 6px solid #EBF2FE;
           border-radius: 50%;
           background-color: #EBF2FE; }
-          @media screen and (max-width: 568px) {
+          @media only screen and (max-width: 568px) {
             body .body #introduction #container-img .circle-img img {
               width: 220px; } }
       body .body #introduction .description {
         margin-top: 1.5rem;
         font-size: 1rem;
         text-align: justify; }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #introduction .description {
             margin-top: 0;
             font-size: 0.9rem; } }
@@ -261,7 +261,7 @@ body {
         bottom: 5%;
         left: 50%;
         transform: translate(-50%, -50%); }
-        @media screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           body .body #introduction .container-scroll {
             display: none; } }
         body .body #introduction .container-scroll a {
@@ -271,14 +271,14 @@ body {
     body .body #about {
       padding: 6rem;
       background-color: #FFFFFF; }
-      @media screen and (max-width: 568px) {
+      @media only screen and (max-width: 568px) {
         body .body #about {
           padding: 4rem 0 4rem 0; } }
       body .body #about .container-timeline {
         border-left: 0.2rem solid #0460D9;
         animation-name: anim-introduction;
         animation-duration: 0.5s; }
-        @media screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           body .body #about .container-timeline:first-child {
             margin-bottom: 3rem; } }
         body .body #about .container-timeline h4 {
@@ -299,7 +299,7 @@ body {
             border-radius: 10px;
             padding: 1rem;
             transition: 0.3s; }
-            @media screen and (max-width: 768px) {
+            @media only screen and (max-width: 1024px) {
               body .body #about .container-timeline .timeline .timeline-right {
                 margin: 0 0 2rem 1.5rem; } }
           body .body #about .container-timeline .timeline .timeline-right:hover {
@@ -383,7 +383,7 @@ body {
         color: #FFFFFF;
         margin-bottom: 2.5rem;
         font-weight: 600; }
-      @media screen and (max-width: 568px) {
+      @media only screen and (max-width: 568px) {
         body .body #skills .skills-desktop {
           display: none; } }
       body .body #skills .skills-desktop .skills-left, body .body #skills .skills-desktop .skills-right {
@@ -391,17 +391,17 @@ body {
         justify-content: space-around; }
         body .body #skills .skills-desktop .skills-left img, body .body #skills .skills-desktop .skills-right img {
           width: 70px; }
-          @media screen and (max-width: 768px) {
+          @media only screen and (max-width: 1024px) {
             body .body #skills .skills-desktop .skills-left img, body .body #skills .skills-desktop .skills-right img {
               width: 80px; } }
       body .body #skills .skills-desktop .skills-left {
         border-right: 2px solid #EBF2FE; }
-        @media screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           body .body #skills .skills-desktop .skills-left {
             border-right: none; } }
       body .body #skills .skills-desktop hr {
         display: none; }
-        @media screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
           body .body #skills .skills-desktop hr {
             display: initial;
             width: 75%;
@@ -409,7 +409,7 @@ body {
             background-color: #EBF2FE; } }
       body .body #skills .skills-mobile {
         display: none; }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #skills .skills-mobile {
             display: initial; } }
         body .body #skills .skills-mobile .languages, body .body #skills .skills-mobile .software {
@@ -418,8 +418,7 @@ body {
           justify-content: space-around; }
           body .body #skills .skills-mobile .languages img, body .body #skills .skills-mobile .software img {
             width: 80px;
-            margin: auto 4%;
-            padding: 10px 0 10px 0; }
+            margin: 10px 4%; }
         body .body #skills .skills-mobile hr {
           width: 75%;
           margin: 1.5rem auto;
@@ -429,7 +428,7 @@ body {
       padding: 5rem 0;
       animation-name: anim-introduction;
       animation-duration: 0.5s; }
-      @media screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1024px) {
         body .body #portfolio .margin-md {
           margin-bottom: 3rem; } }
       body .body #portfolio .box-project .box1 .img-head {
@@ -440,10 +439,10 @@ body {
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         transition: 0.2s; }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #portfolio .box-project .box1 .img-head {
             max-width: 800px; } }
-        @media screen and (min-width: 2560px) {
+        @media only screen and (min-width: 2560px) {
           body .body #portfolio .box-project .box1 .img-head {
             max-width: 540px; } }
         body .body #portfolio .box-project .box1 .img-head img {
@@ -461,69 +460,66 @@ body {
         margin: 0 auto;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px; }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #portfolio .box-project .box2 {
             max-width: 95%; } }
-        @media screen and (max-width: 1024px) {
-          body .body #portfolio .box-project .box2 {
-            min-height: 275px; } }
-        @media screen and (max-width: 1440px) {
+        @media only screen and (max-width: 1440px) {
           body .body #portfolio .box-project .box2 {
             min-height: 300px; } }
-        @media screen and (min-width: 2560px) {
+        @media only screen and (min-width: 2560px) {
           body .body #portfolio .box-project .box2 {
             min-width: 500px;
             min-height: 245px; } }
         body .body #portfolio .box-project .box2 .title {
           text-align: center; }
-          @media screen and (max-width: 568px) {
+          @media only screen and (max-width: 568px) {
             body .body #portfolio .box-project .box2 .title h4 {
               font-size: 2rem; } }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #portfolio .box-project .box2 p {
             font-size: 1.3rem;
             text-align: justify !important; } }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #portfolio .box-project .box2 .text-middle-1 {
             margin-top: 1rem !important;
             padding-bottom: 4rem; } }
         @media screen and (max-width: 1024px) {
           body .body #portfolio .box-project .box2 .text-middle-1 {
             margin-top: 1.3rem; } }
-        @media screen and (min-width: 2560px) {
+        @media only screen and (min-width: 2560px) {
           body .body #portfolio .box-project .box2 .text-middle-1 {
             margin-top: 1.4rem; } }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #portfolio .box-project .box2 .text-middle-2 {
             margin-top: 1rem !important;
             margin-bottom: 3.5rem; } }
         @media screen and (max-width: 1024px) {
           body .body #portfolio .box-project .box2 .text-middle-2 {
             margin-top: 1.3rem; } }
-        @media screen and (max-width: 1440px) {
+        @media only screen and (max-width: 1440px) {
           body .body #portfolio .box-project .box2 .text-middle-2 {
             margin-top: 2rem; } }
-        @media screen and (min-width: 2560px) {
+        @media only screen and (min-width: 2560px) {
           body .body #portfolio .box-project .box2 .text-middle-2 {
             margin-top: 1.4rem; } }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #portfolio .box-project .box2 .text-middle-3 {
             margin-top: 1rem !important;
             margin-bottom: 3.5rem; } }
-        @media screen and (max-width: 1440px) {
+        @media only screen and (max-width: 1440px) {
           body .body #portfolio .box-project .box2 .text-middle-3 {
             margin-top: 2.2rem; } }
-        @media screen and (min-width: 2560px) {
+        @media only screen and (min-width: 2560px) {
           body .body #portfolio .box-project .box2 .text-middle-3 {
             margin-top: 1.4rem; } }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 568px) {
           body .body #portfolio .box-project .box2 .text-middle-4 {
             margin-top: 1rem !important;
             margin-bottom: 3.5rem; } }
-        @media screen and (max-width: 1440px) {
+        @media only screen and (max-width: 1440px) {
           body .body #portfolio .box-project .box2 .text-middle-4 {
             margin-top: 2rem; } }
-        @media screen and (min-width: 2560px) {
+        @media only screen and (min-width: 2560px) {
           body .body #portfolio .box-project .box2 .text-middle-4 {
             margin-top: 1.4rem; } }
         body .body #portfolio .box-project .box2 a {
@@ -535,7 +531,7 @@ body {
           background-color: #EBF2FE;
           border-radius: 10px;
           text-align: center; }
-          @media screen and (max-width: 568px) {
+          @media only screen and (max-width: 568px) {
             body .body #portfolio .box-project .box2 a {
               font-size: 1.3rem; } }
         body .body #portfolio .box-project .box2 a:hover {
@@ -549,12 +545,12 @@ body {
           transition: 0.2s; }
         body .body #portfolio .box-project .box2 .btn-mobile {
           display: none; }
-          @media screen and (max-width: 568px) {
+          @media only screen and (max-width: 568px) {
             body .body #portfolio .box-project .box2 .btn-mobile {
               display: initial; } }
         body .body #portfolio .box-project .box2 .btn-desktop {
           display: initial; }
-          @media screen and (max-width: 568px) {
+          @media only screen and (max-width: 568px) {
             body .body #portfolio .box-project .box2 .btn-desktop {
               display: none; } }
     body .body #imgModal {
@@ -570,7 +566,7 @@ body {
           body .body #imgModal .modal-content {
             margin: 3rem auto auto auto !important;
             width: 900px !important; } }
-        @media screen and (max-width: 1440px) {
+        @media only screen and (max-width: 1440px) {
           body .body #imgModal .modal-content {
             margin: 2rem auto auto auto;
             width: 1100px; } }
@@ -625,7 +621,7 @@ body {
           text-align: center;
           color: #FFFFFF;
           font-weight: 600; }
-      @media screen and (max-width: 568px) {
+      @media only screen and (max-width: 1024px) {
         body .body #contact .contact-desktop {
           display: none; } }
       body .body #contact .contact-desktop .contact-info {
@@ -665,11 +661,11 @@ body {
           animation-name: anim-contact; }
       body .body #contact .contact-mobile {
         display: none; }
-        @media screen and (max-width: 568px) {
+        @media only screen and (max-width: 1024px) {
           body .body #contact .contact-mobile {
             display: initial; }
             body .body #contact .contact-mobile .col-contact {
-              padding: 0.5rem 0; }
+              padding: 3% 0; }
             body .body #contact .contact-mobile .col-contact a {
               position: relative;
               display: flex;

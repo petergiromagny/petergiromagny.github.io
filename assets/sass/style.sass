@@ -460,6 +460,7 @@ body
             width: 75%
             margin: 2rem auto
             background-color: $back1
+
       .skills-mobile
         display: none
         +responsive(xs)
@@ -470,8 +471,8 @@ body
           justify-content: space-around
           img
             width: 80px
-            margin: auto 4%
-            padding: 10px 0 10px 0
+            margin: 10px 4%
+            //padding: 10px 0 10px 0
         hr
           width: 75%
           margin: 1.5rem auto
@@ -483,7 +484,7 @@ body
       padding: 5rem 0
       animation-name: anim-introduction
       animation-duration: .5s
-      +responsive(md)
+      +responsive(sm)
         .margin-md
           margin-bottom: 3rem
       .box-project
@@ -511,8 +512,6 @@ body
           border-bottom-right-radius: 10px
           +responsive(xs)
             max-width: 95%
-          +responsive(md)
-            min-height: 275px
           +responsive(lg)
             min-height: 300px
           +responsive(xl)
@@ -656,7 +655,7 @@ body
           color: $white
           font-weight: $bold
       .contact-desktop
-        +responsive(xs)
+        +responsive(sm)
           display: none
         .contact-info
           position: absolute
@@ -685,10 +684,10 @@ body
             animation-name: anim-contact
       .contact-mobile
         display: none
-        +responsive(xs)
+        +responsive(sm)
           display: initial
           .col-contact
-            padding: .5rem 0
+            padding: 3% 0
           .col-contact a
             position: relative
             display: flex
