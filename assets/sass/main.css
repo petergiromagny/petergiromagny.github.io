@@ -409,6 +409,10 @@ body {
             background-color: #EBF2FE; } }
       body .body #skills .skills-mobile {
         display: none; }
+        @media screen and (max-width: 1024px) {
+          body .body #skills .skills-mobile .languages img, body .body #skills .skills-mobile .software img {
+            width: 80px;
+            height: 80px; } }
         @media only screen and (max-width: 568px) {
           body .body #skills .skills-mobile {
             display: initial; } }

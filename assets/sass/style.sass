@@ -463,6 +463,11 @@ body
 
       .skills-mobile
         display: none
+        +responsive(md)
+          .languages, .software
+            img
+              width: 80px
+              height: 80px
         +responsive(xs)
           display: initial
         .languages, .software
